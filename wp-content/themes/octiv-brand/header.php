@@ -33,20 +33,8 @@
 
 </head>
 <body <?php body_class(); ?>>
-
-<header>
-  <div class="site-width">
-    <div class="half">
-      <div>
-        <a href="/" title="Octiv Design System Homepage" class="site-logo">Logo</a>
-      </div>
-      <div>
-        <ul>
-          <li><a href="#0">Link</a></li>
-          <li><a href="#0">Link</a></li>
-          <li><a href="#0">Link</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</header>
+<?php if( current_user_can('edit_pages') ) :
+  echo '<ul style="position: fixed; bottom: 0; z-index: 999;"><li style="display: inline-block;"><a href="' . site_url() . '/wp-admin" class="btn-primary">Admin</a></li>';
+  echo '<li style="display: inline-block;"><a href="' . site_url() . '/wp-admin/post.php?post=' . $post->ID . '&action=edit" class="btn-primary">Edit</a></li>';
+  echo '</ul>';
+  endif; ?>

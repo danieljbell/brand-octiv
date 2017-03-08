@@ -1,8 +1,5 @@
-@import 'variables',
-        'mixins',
-        'base',
-        'grid';
-
-body {
-  background-color: $brand;
-}
+@import 'global/variables',
+        'global/mixins',
+        'global/base',
+        'global/grid',
+        'global/buttons';
