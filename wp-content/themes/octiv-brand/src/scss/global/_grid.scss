@@ -3,6 +3,8 @@
 GRID
 ==============================
 */
+.three-fourth,
+.three-fourth-reversed,
 .two-third,
 .half,
 .third,
@@ -22,6 +24,8 @@ GRID
 .third-only {
   justify-content: center;
 }
+.three-fourth > div,
+.three-fourth-reversed > div,
 .two-third > div,
 .half > div,
 .third > div,
@@ -45,6 +49,8 @@ GRID
     margin-bottom: 2rem;
     margin-right: 2rem;
   }
+  .three-fourth > div,
+  .three-fourth-reversed > div,
   .third > div {
     margin-bottom: 2rem;
   }
@@ -91,6 +97,22 @@ GRID
   }
 }
 @include bp(lg) {
+  .three-fourth > div {
+    flex-basis: calc(((100%/4) * 3) - 1rem);
+    margin-right: 2rem;
+    &:nth-child(2n) {
+      flex-basis: calc(((100%/4)) - 1rem);
+      margin-right: 0;
+    }
+  }
+  .three-fourth-reversed > div {
+    flex-basis: calc(((100%/4)) - 1rem);
+    margin-right: 2rem;
+    &:nth-child(2n) {
+      flex-basis: calc(((100%/4) * 3) - 1rem);
+      margin-right: 0;
+    }
+  }
   .two-third-only > div {
     flex-basis: calc(((100%/3) * 2) - 1rem);
   }

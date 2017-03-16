@@ -1,10 +1,5 @@
 <?php get_header(); ?>
   <?php get_header('logged-in'); ?>
-  <section class="hero">
-    <div class="site-width">
-      <h1>Octiv Grid System</h1>
-    </div>
-  </section>
   <section>
     <div class="site-width">
       <div class="centered">
@@ -49,30 +44,6 @@
 &lt;/div&gt;
       </code></pre>
       <div class="has-code-example">
-        <div class="fourth">
-          <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
-            One of Four
-          </div>
-          <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">
-            Two of Four
-          </div>
-          <div style="border-radius: 5px; background-color: #b949f5; color: #fff; text-align: center; padding: 1rem;">
-            Three of Four
-          </div>
-          <div style="border-radius: 5px; background-color: #fac500; color: #fff; text-align: center; padding: 1rem;">
-            Four of Four
-          </div>
-        </div>
-      </div>
-      <pre><code class="language-markup">
-&lt;div class="fourth"&gt;
-  &lt;div&gt;One of Four&lt;/div&gt;
-  &lt;div&gt;Two of Four&lt;/div&gt;
-  &lt;div&gt;Three of Four&lt;/div&gt;
-  &lt;div&gt;Four of Four&lt;/div&gt;
-&lt;/div&gt;
-      </code></pre>
-      <div class="has-code-example">
         <div class="two-third">
           <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
             One of Two
@@ -104,7 +75,62 @@
   &lt;div&gt;Two of Two&lt;/div&gt;
 &lt;/div&gt;
       </code></pre>
-    </div>
+      <div class="has-code-example">
+        <div class="fourth">
+          <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
+            One of Four
+          </div>
+          <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">
+            Two of Four
+          </div>
+          <div style="border-radius: 5px; background-color: #b949f5; color: #fff; text-align: center; padding: 1rem;">
+            Three of Four
+          </div>
+          <div style="border-radius: 5px; background-color: #fac500; color: #fff; text-align: center; padding: 1rem;">
+            Four of Four
+          </div>
+        </div>
+      </div>
+      <pre><code class="language-markup">
+&lt;div class="fourth"&gt;
+  &lt;div&gt;One of Four&lt;/div&gt;
+  &lt;div&gt;Two of Four&lt;/div&gt;
+  &lt;div&gt;Three of Four&lt;/div&gt;
+  &lt;div&gt;Four of Four&lt;/div&gt;
+&lt;/div&gt;
+      </code></pre>
+      <div class="has-code-example">
+        <div class="three-fourth">
+          <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
+            One of Two
+          </div>
+          <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">
+            Two of Two
+          </div>
+        </div>
+      </div>
+      <pre><code class="language-markup">
+&lt;div class="three-fourth"&gt;
+  &lt;div&gt;One of Two&lt;/div&gt;
+  &lt;div&gt;Two of Two&lt;/div&gt;
+&lt;/div&gt;
+      </code></pre>
+      <div class="has-code-example">
+        <div class="three-fourth-reversed">
+          <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
+            One of Two
+          </div>
+          <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">
+            Two of Two
+          </div>
+        </div>
+      </div>
+      <pre><code class="language-markup">
+&lt;div class="three-fourth-reversed"&gt;
+  &lt;div&gt;One of Two&lt;/div&gt;
+  &lt;div&gt;Two of Two&lt;/div&gt;
+&lt;/div&gt;
+      </code></pre>
   </section>
   <section style="padding-top: 0;">
     <div class="site-width">
