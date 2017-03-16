@@ -1,1 +1,27 @@
+/*
+========================
+COLORS
+========================
+*/
 $brand: #ed4c06;
+$brand2: #42b0d8;
+$brand3: #33ab40;
+$brand4: #b949f5;
+$brand5: #fac500;
+$gray: #000;
+$mgray: #ccc;
+$lgray: #f0f0f0;
+
+/*
+========================
+BREAKPOINTS
+========================
+*/
+$breakpoints: (
+  xs: 0px,
+  sm: 600px,
+  md: 767px,
+  lg: 1050px,
+  xl: 1280px,
+  xxl: 1440px
+) !default;
