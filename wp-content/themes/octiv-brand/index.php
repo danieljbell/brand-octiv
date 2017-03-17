@@ -6,24 +6,98 @@
         <h2>Typography</h2>
         <p>Something</p>
       </div>
-      <div class="half">
+      <div class="half" style="align-items: flex-start;">
         <div>
           <h1>Heading Level 1</h1>
           <h2>Heading Level 2</h2>
-          <h3>Heading Level 3</h3>
+          <h3>Heading Level 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, nostrum!</h3>
           <h4>Heading Level 4</h4>
           <h5>Heading Level 5</h5>
           <h6>Heading Level 6</h6>
           <p>Basic Paragraph</p>
+          <ul>
+            <li>Unordered List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+          </ul>
+          <ol>
+            <li>Numbered List Item 1</li>
+            <li>Numbered List Item 2</li>
+            <li>Numbered List Item 3</li>
+          </ol>
+          <table>
+            <thead>
+              <tr>
+                <th>Heading Cell</th>
+                <th>Heading Cell</th>
+                <th>Heading Cell</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Body Cell</td>
+                <td>Body Cell</td>
+                <td>Body Cell</td>
+              </tr>
+              <tr>
+                <td>Body Cell</td>
+                <td>Body Cell</td>
+                <td>Body Cell</td>
+              </tr>
+              <tr>
+                <td>Body Cell</td>
+                <td>Body Cell</td>
+                <td>Body Cell</td>
+              </tr>
+            </tbody>
+          </table>
+          <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sed rerum delectus placeat exercitationem incidunt iusto, magni voluptatem assumenda vero, odio, sequi blanditiis! Rem, totam!</blockquote>
         </div>
         <div class="font-bump">
           <h1>Heading Level 1</h1>
           <h2>Heading Level 2</h2>
-          <h3>Heading Level 3</h3>
+          <h3>Heading Level 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, aliquam?</h3>
           <h4>Heading Level 4</h4>
           <h5>Heading Level 5</h5>
           <h6>Heading Level 6</h6>
           <p>Basic Paragraph</p>
+          <ul>
+            <li>Unordered List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+          </ul>
+          <ol>
+            <li>Numbered List Item 1</li>
+            <li>Numbered List Item 2</li>
+            <li>Numbered List Item 3</li>
+          </ol>
+          <table>
+            <thead>
+              <tr>
+                <th>Heading Cell</th>
+                <th>Heading Cell</th>
+                <th>Heading Cell</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Body Cell</td>
+                <td>Body Cell</td>
+                <td>Body Cell</td>
+              </tr>
+              <tr>
+                <td>Body Cell</td>
+                <td>Body Cell</td>
+                <td>Body Cell</td>
+              </tr>
+              <tr>
+                <td>Body Cell</td>
+                <td>Body Cell</td>
+                <td>Body Cell</td>
+              </tr>
+            </tbody>
+          </table>
+          <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime expedita qui accusantium, tempora, dolorum aliquid, molestiae ipsa esse, tenetur fugit eligendi quas ipsam natus? Quis.</blockquote>
         </div>
       </div>
       <div class="centered">
