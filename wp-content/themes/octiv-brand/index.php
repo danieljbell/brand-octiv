@@ -1,109 +1,107 @@
 <?php get_header(); ?>
   <?php get_header('logged-in'); ?>
-  <section>
+  <section class="callout-light">
     <div class="site-width">
-      <div class="centered">
-        <h2>Typography</h2>
-        <p>Something</p>
-      </div>
-      <div class="half" style="align-items: flex-start;">
-        <div>
-          <h1>Heading Level 1</h1>
-          <h2>Heading Level 2</h2>
-          <h3>Heading Level 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, nostrum!</h3>
-          <h4>Heading Level 4</h4>
-          <h5>Heading Level 5</h5>
-          <h6>Heading Level 6</h6>
-          <p>Basic Paragraph</p>
-          <ul>
-            <li>Unordered List Item 1</li>
-            <li>List Item 2</li>
-            <li>List Item 3</li>
-          </ul>
-          <ol>
-            <li>Numbered List Item 1</li>
-            <li>Numbered List Item 2</li>
-            <li>Numbered List Item 3</li>
-          </ol>
-          <table>
-            <thead>
-              <tr>
-                <th>Heading Cell</th>
-                <th>Heading Cell</th>
-                <th>Heading Cell</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Body Cell</td>
-                <td>Body Cell</td>
-                <td>Body Cell</td>
-              </tr>
-              <tr>
-                <td>Body Cell</td>
-                <td>Body Cell</td>
-                <td>Body Cell</td>
-              </tr>
-              <tr>
-                <td>Body Cell</td>
-                <td>Body Cell</td>
-                <td>Body Cell</td>
-              </tr>
-            </tbody>
-          </table>
-          <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sed rerum delectus placeat exercitationem incidunt iusto, magni voluptatem assumenda vero, odio, sequi blanditiis! Rem, totam!</blockquote>
-        </div>
-        <div class="font-bump">
-          <h1>Heading Level 1</h1>
-          <h2>Heading Level 2</h2>
-          <h3>Heading Level 3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, aliquam?</h3>
-          <h4>Heading Level 4</h4>
-          <h5>Heading Level 5</h5>
-          <h6>Heading Level 6</h6>
-          <p>Basic Paragraph</p>
-          <ul>
-            <li>Unordered List Item 1</li>
-            <li>List Item 2</li>
-            <li>List Item 3</li>
-          </ul>
-          <ol>
-            <li>Numbered List Item 1</li>
-            <li>Numbered List Item 2</li>
-            <li>Numbered List Item 3</li>
-          </ol>
-          <table>
-            <thead>
-              <tr>
-                <th>Heading Cell</th>
-                <th>Heading Cell</th>
-                <th>Heading Cell</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Body Cell</td>
-                <td>Body Cell</td>
-                <td>Body Cell</td>
-              </tr>
-              <tr>
-                <td>Body Cell</td>
-                <td>Body Cell</td>
-                <td>Body Cell</td>
-              </tr>
-              <tr>
-                <td>Body Cell</td>
-                <td>Body Cell</td>
-                <td>Body Cell</td>
-              </tr>
-            </tbody>
-          </table>
-          <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime expedita qui accusantium, tempora, dolorum aliquid, molestiae ipsa esse, tenetur fugit eligendi quas ipsam natus? Quis.</blockquote>
-        </div>
-      </div>
-      <div class="centered">
-        <h2>Utility Classes</h2>
-        <p>Something</p>
-      </div>
+      <h1>Heading Level 1</h1>
+      <h2>Heading Level 2</h2>
+      <h3>Heading Level 3</h3>
+      <h4>Heading Level 4</h4>
+      <h5>Heading Level 5</h5>
+      <h6>Heading Level 6</h6>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus unde distinctio consectetur qui voluptatum facilis numquam maiores, in eos delectus. Ipsa placeat vero minus quis!</p>
+      <a href="#0" class="btn-primary">Some Button</a>
+      <a href="#0" class="btn-arrow">Button Arrow</a>
+    </div>
+  </section>
+  <section class="callout-dark">
+    <div class="site-width">
+      <h1>Heading Level 1</h1>
+      <h2>Heading Level 2</h2>
+      <h3>Heading Level 3</h3>
+      <h4>Heading Level 4</h4>
+      <h5>Heading Level 5</h5>
+      <h6>Heading Level 6</h6>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus unde distinctio consectetur qui voluptatum facilis numquam maiores, in eos delectus. Ipsa placeat vero minus quis!</p>
+      <a href="#0" class="btn-primary">Some Button</a>
+      <a href="#0" class="btn-arrow">Button Arrow</a>
+    </div>
+  </section>
+  <section class="callout-brand">
+    <div class="site-width">
+      <h1>Heading Level 1</h1>
+      <h2>Heading Level 2</h2>
+      <h3>Heading Level 3</h3>
+      <h4>Heading Level 4</h4>
+      <h5>Heading Level 5</h5>
+      <h6>Heading Level 6</h6>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus unde distinctio consectetur qui voluptatum facilis numquam maiores, in eos delectus. Ipsa placeat vero minus quis!</p>
+      <a href="#0" class="btn-primary">Some Button</a>
+      <a href="#0" class="btn-arrow">Button Arrow</a>
+    </div>
+  </section>
+  <section class="callout-brand-two">
+    <div class="site-width">
+      <h1>Heading Level 1</h1>
+      <h2>Heading Level 2</h2>
+      <h3>Heading Level 3</h3>
+      <h4>Heading Level 4</h4>
+      <h5>Heading Level 5</h5>
+      <h6>Heading Level 6</h6>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus unde distinctio consectetur qui voluptatum facilis numquam maiores, in eos delectus. Ipsa placeat vero minus quis!</p>
+      <a href="#0" class="btn-primary">Some Button</a>
+      <a href="#0" class="btn-arrow">Button Arrow</a>
+    </div>
+  </section>
+  <section class="callout-brand-three">
+    <div class="site-width">
+      <h1>Heading Level 1</h1>
+      <h2>Heading Level 2</h2>
+      <h3>Heading Level 3</h3>
+      <h4>Heading Level 4</h4>
+      <h5>Heading Level 5</h5>
+      <h6>Heading Level 6</h6>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus unde distinctio consectetur qui voluptatum facilis numquam maiores, in eos delectus. Ipsa placeat vero minus quis!</p>
+      <a href="#0" class="btn-primary">Some Button</a>
+      <a href="#0" class="btn-arrow">Button Arrow</a>
+    </div>
+  </section>
+  <section class="callout-brand-four">
+    <div class="site-width">
+      <h1>Heading Level 1</h1>
+      <h2>Heading Level 2</h2>
+      <h3>Heading Level 3</h3>
+      <h4>Heading Level 4</h4>
+      <h5>Heading Level 5</h5>
+      <h6>Heading Level 6</h6>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus unde distinctio consectetur qui voluptatum facilis numquam maiores, in eos delectus. Ipsa placeat vero minus quis!</p>
+      <a href="#0" class="btn-primary">Some Button</a>
+      <a href="#0" class="btn-arrow">Button Arrow</a>
+    </div>
+  </section>
+  <section class="callout-brand-five">
+    <div class="site-width">
+      <h1>Heading Level 1</h1>
+      <h2>Heading Level 2</h2>
+      <h3>Heading Level 3</h3>
+      <h4>Heading Level 4</h4>
+      <h5>Heading Level 5</h5>
+      <h6>Heading Level 6</h6>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus unde distinctio consectetur qui voluptatum facilis numquam maiores, in eos delectus. Ipsa placeat vero minus quis!</p>
+      <a href="#0" class="btn-primary">Some Button</a>
+      <a href="#0" class="btn-arrow">Button Arrow</a>
+    </div>
+  </section>
+  <section class="callout-dark" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(//fillmurray.com/1920/600); box-shadow">
+    <div class="site-width">
+      <h1>Heading Level 1</h1>
+      <h2>Heading Level 2</h2>
+      <h3>Heading Level 3</h3>
+      <h4>Heading Level 4</h4>
+      <h5>Heading Level 5</h5>
+      <h6>Heading Level 6</h6>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus unde distinctio consectetur qui voluptatum facilis numquam maiores, in eos delectus. Ipsa placeat vero minus quis!</p>
+      <a href="#0" class="btn-primary">Some Button</a>
+      <a href="#0" class="btn-arrow">Button Arrow</a>
     </div>
   </section>
 <?php get_footer(); ?>

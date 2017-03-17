@@ -1,0 +1,95 @@
+%callout {
+  color: $white;
+  h3 {
+    color: $white;
+  }
+  .btn-primary {
+    background-color: transparent;
+    color: $white;
+    border: 1px solid $white;
+    &:hover, &:focus {
+      background-color: $white;
+      border: 1px solid transparent;
+    }
+  }
+  .btn-arrow {
+    color: $white;
+    box-shadow: inset 0 -2px 0 $white;
+    &:hover, &:focus {
+      box-shadow: inset 0 -38px 0 $white;
+    }
+  }
+}
+
+.callout-light {
+  background-color: $lgray;
+  background-image: linear-gradient($white, $lgray);
+}
+.callout-dark {
+  @extend %callout;
+  background-color: $gray;
+  background-image: linear-gradient(lighten($gray, 15%), $gray);
+  background-size: cover;
+  background-position: center;
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-arrow:hover,
+  .btn-arrow:focus {
+    color: $gray;
+  }
+}
+.callout-brand {
+  @extend %callout;
+  background-color: $brand;
+  background-image: linear-gradient(lighten($brand, 10%), darken($brand, 10%));
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-arrow:hover,
+  .btn-arrow:focus {
+    color: $brand;
+  }
+}
+.callout-brand-two {
+  @extend %callout;
+  background-color: $brand2;
+  background-image: linear-gradient(lighten($brand2, 10%), darken($brand2, 10%));
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-arrow:hover,
+  .btn-arrow:focus {
+    color: $brand2;
+  }
+}
+.callout-brand-three {
+  @extend %callout;
+  background-color: $brand3;
+  background-image: linear-gradient(lighten($brand3, 10%), darken($brand3, 10%));
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-arrow:hover,
+  .btn-arrow:focus {
+    color: $brand3;
+  }
+}
+.callout-brand-four {
+  @extend %callout;
+  background-color: $brand4;
+  background-image: linear-gradient(lighten($brand4, 10%), darken($brand4, 10%));
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-arrow:hover,
+  .btn-arrow:focus {
+    color: $brand4;
+  }
+}
+.callout-brand-five {
+  @extend %callout;
+  background-color: $brand5;
+  background-image: linear-gradient(lighten($brand5, 10%), darken($brand5, 10%));
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-arrow:hover,
+  .btn-arrow:focus {
+    color: $brand5;
+  }
+}

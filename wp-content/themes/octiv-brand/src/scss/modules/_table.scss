@@ -1,0 +1,43 @@
+// th {
+//   display: none;
+// }
+// td {
+//   display: block;
+// }
+// @include bp(md) {
+  table {
+    width: 100%;
+    box-shadow: 0 0 25px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    border-collapse: collapse;
+  }
+  th, td {
+    display: table-cell;
+  }
+  table th,
+  table td {
+    padding: 0.5rem;
+  }
+  thead th {
+    background-color: $brand;
+    color: $white;
+    border-right: 1px solid $mgray;
+    &:first-child {
+      border-radius: 5px 0 0 0;
+    }
+    &:last-child {
+      border-radius: 0 5px 0 0;
+      border-right: 0;
+    }
+  }
+  tbody {
+    border: 1px solid $mgray;
+  }
+  tbody tr:nth-child(2n) td {
+    background-color: $lgray;
+  }
+  tbody td:nth-child(2n) {
+    border-left: 1px solid $mgray;
+    border-right: 1px solid $mgray;
+  }
+// }
