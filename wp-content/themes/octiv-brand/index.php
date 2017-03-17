@@ -3,240 +3,267 @@
   <section>
     <div class="site-width">
       <div class="centered">
-        <h2>Standard Grid</h2>
-        <p>something</p>
-        <br>
+        <h2>Typography</h2>
+        <p>Something</p>
       </div>
-      <div class="has-code-example">
-        <div class="half">
-          <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
-            One of Two
-          </div>
-          <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">
-            Two of Two
-          </div>
+      <div class="half">
+        <div>
+          <h1>Heading Level 1</h1>
+          <h2>Heading Level 2</h2>
+          <h3>Heading Level 3</h3>
+          <h4>Heading Level 4</h4>
+          <h5>Heading Level 5</h5>
+          <h6>Heading Level 6</h6>
+          <p>Basic Paragraph</p>
+        </div>
+        <div class="font-bump">
+          <h1>Heading Level 1</h1>
+          <h2>Heading Level 2</h2>
+          <h3>Heading Level 3</h3>
+          <h4>Heading Level 4</h4>
+          <h5>Heading Level 5</h5>
+          <h6>Heading Level 6</h6>
+          <p>Basic Paragraph</p>
         </div>
       </div>
-      <pre><code class="language-markup">
-&lt;div class="half">
-  &lt;div>One of Two&lt;/div>
-  &lt;div>Two of Two&lt;/div>
-&lt;/div>
-      </code></pre>
-      <div class="has-code-example">
-        <div class="third">
-          <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
-            One of Three
-          </div>
-          <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">
-            Two of Three
-          </div>
-          <div style="border-radius: 5px; background-color: #b949f5; color: #fff; text-align: center; padding: 1rem;">
-            Three of Three
-          </div>
-        </div>
-      </div>
-      <pre><code class="language-markup">
-&lt;div class="third"&gt;
-  &lt;div&gt;One of Three&lt;/div&gt;
-  &lt;div&gt;Two of Three&lt;/div&gt;
-  &lt;div&gt;Three of Three&lt;/div&gt;
-&lt;/div&gt;
-      </code></pre>
-      <div class="has-code-example">
-        <div class="two-third">
-          <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
-            One of Two
-          </div>
-          <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">
-            Two of Two
-          </div>
-        </div>
-      </div>
-      <pre><code class="language-markup">
-&lt;div class="two-third"&gt;
-  &lt;div&gt;One of Two&lt;/div&gt;
-  &lt;div&gt;Two of Two&lt;/div&gt;
-&lt;/div&gt;
-      </code></pre>
-      <div class="has-code-example">
-        <div class="two-third-reversed">
-          <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
-            One of Two
-          </div>
-          <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">
-            Two of Two
-          </div>
-        </div>
-      </div>
-      <pre><code class="language-markup">
-&lt;div class="two-third-reversed"&gt;
-  &lt;div&gt;One of Two&lt;/div&gt;
-  &lt;div&gt;Two of Two&lt;/div&gt;
-&lt;/div&gt;
-      </code></pre>
-      <div class="has-code-example">
-        <div class="fourth">
-          <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
-            One of Four
-          </div>
-          <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">
-            Two of Four
-          </div>
-          <div style="border-radius: 5px; background-color: #b949f5; color: #fff; text-align: center; padding: 1rem;">
-            Three of Four
-          </div>
-          <div style="border-radius: 5px; background-color: #fac500; color: #fff; text-align: center; padding: 1rem;">
-            Four of Four
-          </div>
-        </div>
-      </div>
-      <pre><code class="language-markup">
-&lt;div class="fourth"&gt;
-  &lt;div&gt;One of Four&lt;/div&gt;
-  &lt;div&gt;Two of Four&lt;/div&gt;
-  &lt;div&gt;Three of Four&lt;/div&gt;
-  &lt;div&gt;Four of Four&lt;/div&gt;
-&lt;/div&gt;
-      </code></pre>
-      <div class="has-code-example">
-        <div class="three-fourth">
-          <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
-            One of Two
-          </div>
-          <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">
-            Two of Two
-          </div>
-        </div>
-      </div>
-      <pre><code class="language-markup">
-&lt;div class="three-fourth"&gt;
-  &lt;div&gt;One of Two&lt;/div&gt;
-  &lt;div&gt;Two of Two&lt;/div&gt;
-&lt;/div&gt;
-      </code></pre>
-      <div class="has-code-example">
-        <div class="three-fourth-reversed">
-          <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
-            One of Two
-          </div>
-          <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">
-            Two of Two
-          </div>
-        </div>
-      </div>
-      <pre><code class="language-markup">
-&lt;div class="three-fourth-reversed"&gt;
-  &lt;div&gt;One of Two&lt;/div&gt;
-  &lt;div&gt;Two of Two&lt;/div&gt;
-&lt;/div&gt;
-      </code></pre>
-  </section>
-  <section style="padding-top: 0;">
-    <div class="site-width">
       <div class="centered">
-        <h2>Stack Order Grid</h2>
-        <p>something</p>
-        <br>
+        <h2>Utility Classes</h2>
+        <p>Something</p>
       </div>
-      <div class="has-code-example">
-        <div class="half-stack">
-          <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
-            One of Two
-          </div>
-          <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">
-            Two of Two
-          </div>
-        </div>
-      </div>
-      <pre><code class="language-markup">
-&lt;div class="half-stack"&gt;
-  &lt;div&gt;One of Two&lt;/div&gt;
-  &lt;div&gt;Two of Two&lt;/div&gt;
-&lt;/div&gt;
-      </code></pre>
-      <div class="has-code-example">
-        <div class="two-third-stack">
-          <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">One of Two</div>
-          <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">Two of Two</div>
-        </div>
-      </div>
-      <pre><code class="language-markup">
-&lt;div class="two-third-stack"&gt;
-  &lt;div&gt;One of Two&lt;/div&gt;
-  &lt;div&gt;Two of Two&lt;/div&gt;
-&lt;/div&gt;
-      </code></pre>
     </div>
   </section>
-  <section style="padding-top: 0;">
-    <div class="site-width">
-      <div class="centered">
-        <h2>Centered Containers</h2>
-        <p>something</p>
-        <br>
-      </div>
-      <div class="has-code-example">
-        <div class="two-third-only">
-          <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">One of One</div>
-        </div>
-      </div>
-      <pre><code class="language-markup">
-&lt;div class="two-third-only"&gt;
-  &lt;div&gt;One of One&lt;/div&gt;
-&lt;/div&gt;
-      </code></pre>
-      <div class="has-code-example">
-        <div class="half-only">
-          <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">One of One</div>
-        </div>
-      </div>
-      <pre><code class="language-markup">
-&lt;div class="half-only"&gt;
-  &lt;div&gt;One of One&lt;/div&gt;
-&lt;/div&gt;
-      </code></pre>
-      <div class="has-code-example">
-        <div class="third-only">
-          <div style="border-radius: 5px; background-color: #b949f5; color: #fff; text-align: center; padding: 1rem;">One of One</div>
-        </div>
-      </div>
-      <pre><code class="language-markup">
-&lt;div class="third-only"&gt;
-  &lt;div&gt;One of One&lt;/div&gt;
-&lt;/div&gt;
-      </code></pre>
-    </div>
-  </section>
-
-  <style>
-    pre {
-      display: none;
-      /*border: 1px solid #ccc;
-      border-radius: 5px;
-      background-color: #f0f0f0;
-      background-image: linear-gradient(#fff, #f0f0f0);
-      padding: 2rem;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
-      transition: all 300ms ease-out;*/
-    }
-    .example-is-open + pre {
-      display: block;
-    }
-  </style>
-
-  <script>
-    (function() {
-      var codeExamples = document.querySelectorAll('.has-code-example');
-      for (var i = 0; i < codeExamples.length; i++) {
-        codeExamples[i].addEventListener('click', function() {
-          this.classList.toggle('example-is-open');
-        });
-      }
-    })();
-  </script>
 <?php get_footer(); ?>
+
+<?php // GRID
+// <section>
+//   <div class="site-width">
+//     <div class="centered">
+//       <h2>Standard Grid</h2>
+//       <p>something</p>
+//       <br>
+//     </div>
+//     <div class="has-code-example">
+//       <div class="half">
+//         <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
+//           One of Two
+//         </div>
+//         <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">
+//           Two of Two
+//         </div>
+//       </div>
+//     </div>
+//     <pre><code class="language-markup">
+// &lt;div class="half">
+// &lt;div>One of Two&lt;/div>
+// &lt;div>Two of Two&lt;/div>
+// &lt;/div>
+//     </code></pre>
+//     <div class="has-code-example">
+//       <div class="third">
+//         <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
+//           One of Three
+//         </div>
+//         <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">
+//           Two of Three
+//         </div>
+//         <div style="border-radius: 5px; background-color: #b949f5; color: #fff; text-align: center; padding: 1rem;">
+//           Three of Three
+//         </div>
+//       </div>
+//     </div>
+//     <pre><code class="language-markup">
+// &lt;div class="third"&gt;
+// &lt;div&gt;One of Three&lt;/div&gt;
+// &lt;div&gt;Two of Three&lt;/div&gt;
+// &lt;div&gt;Three of Three&lt;/div&gt;
+// &lt;/div&gt;
+//     </code></pre>
+//     <div class="has-code-example">
+//       <div class="two-third">
+//         <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
+//           One of Two
+//         </div>
+//         <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">
+//           Two of Two
+//         </div>
+//       </div>
+//     </div>
+//     <pre><code class="language-markup">
+// &lt;div class="two-third"&gt;
+// &lt;div&gt;One of Two&lt;/div&gt;
+// &lt;div&gt;Two of Two&lt;/div&gt;
+// &lt;/div&gt;
+//     </code></pre>
+//     <div class="has-code-example">
+//       <div class="two-third-reversed">
+//         <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
+//           One of Two
+//         </div>
+//         <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">
+//           Two of Two
+//         </div>
+//       </div>
+//     </div>
+//     <pre><code class="language-markup">
+// &lt;div class="two-third-reversed"&gt;
+// &lt;div&gt;One of Two&lt;/div&gt;
+// &lt;div&gt;Two of Two&lt;/div&gt;
+// &lt;/div&gt;
+//     </code></pre>
+//     <div class="has-code-example">
+//       <div class="fourth">
+//         <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
+//           One of Four
+//         </div>
+//         <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">
+//           Two of Four
+//         </div>
+//         <div style="border-radius: 5px; background-color: #b949f5; color: #fff; text-align: center; padding: 1rem;">
+//           Three of Four
+//         </div>
+//         <div style="border-radius: 5px; background-color: #fac500; color: #fff; text-align: center; padding: 1rem;">
+//           Four of Four
+//         </div>
+//       </div>
+//     </div>
+//     <pre><code class="language-markup">
+// &lt;div class="fourth"&gt;
+// &lt;div&gt;One of Four&lt;/div&gt;
+// &lt;div&gt;Two of Four&lt;/div&gt;
+// &lt;div&gt;Three of Four&lt;/div&gt;
+// &lt;div&gt;Four of Four&lt;/div&gt;
+// &lt;/div&gt;
+//     </code></pre>
+//     <div class="has-code-example">
+//       <div class="three-fourth">
+//         <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
+//           One of Two
+//         </div>
+//         <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">
+//           Two of Two
+//         </div>
+//       </div>
+//     </div>
+//     <pre><code class="language-markup">
+// &lt;div class="three-fourth"&gt;
+// &lt;div&gt;One of Two&lt;/div&gt;
+// &lt;div&gt;Two of Two&lt;/div&gt;
+// &lt;/div&gt;
+//     </code></pre>
+//     <div class="has-code-example">
+//       <div class="three-fourth-reversed">
+//         <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
+//           One of Two
+//         </div>
+//         <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">
+//           Two of Two
+//         </div>
+//       </div>
+//     </div>
+//     <pre><code class="language-markup">
+// &lt;div class="three-fourth-reversed"&gt;
+// &lt;div&gt;One of Two&lt;/div&gt;
+// &lt;div&gt;Two of Two&lt;/div&gt;
+// &lt;/div&gt;
+//     </code></pre>
+// </section>
+// <section style="padding-top: 0;">
+//   <div class="site-width">
+//     <div class="centered">
+//       <h2>Stack Order Grid</h2>
+//       <p>something</p>
+//       <br>
+//     </div>
+//     <div class="has-code-example">
+//       <div class="half-stack">
+//         <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">
+//           One of Two
+//         </div>
+//         <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">
+//           Two of Two
+//         </div>
+//       </div>
+//     </div>
+//     <pre><code class="language-markup">
+// &lt;div class="half-stack"&gt;
+// &lt;div&gt;One of Two&lt;/div&gt;
+// &lt;div&gt;Two of Two&lt;/div&gt;
+// &lt;/div&gt;
+//     </code></pre>
+//     <div class="has-code-example">
+//       <div class="two-third-stack">
+//         <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">One of Two</div>
+//         <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">Two of Two</div>
+//       </div>
+//     </div>
+//     <pre><code class="language-markup">
+// &lt;div class="two-third-stack"&gt;
+// &lt;div&gt;One of Two&lt;/div&gt;
+// &lt;div&gt;Two of Two&lt;/div&gt;
+// &lt;/div&gt;
+//     </code></pre>
+//   </div>
+// </section>
+// <section style="padding-top: 0;">
+//   <div class="site-width">
+//     <div class="centered">
+//       <h2>Centered Containers</h2>
+//       <p>something</p>
+//       <br>
+//     </div>
+//     <div class="has-code-example">
+//       <div class="two-third-only">
+//         <div style="border-radius: 5px; background-color: #42b0d8; color: #fff; text-align: center; padding: 1rem;">One of One</div>
+//       </div>
+//     </div>
+//     <pre><code class="language-markup">
+// &lt;div class="two-third-only"&gt;
+// &lt;div&gt;One of One&lt;/div&gt;
+// &lt;/div&gt;
+//     </code></pre>
+//     <div class="has-code-example">
+//       <div class="half-only">
+//         <div style="border-radius: 5px; background-color: #33ab40; color: #fff; text-align: center; padding: 1rem;">One of One</div>
+//       </div>
+//     </div>
+//     <pre><code class="language-markup">
+// &lt;div class="half-only"&gt;
+// &lt;div&gt;One of One&lt;/div&gt;
+// &lt;/div&gt;
+//     </code></pre>
+//     <div class="has-code-example">
+//       <div class="third-only">
+//         <div style="border-radius: 5px; background-color: #b949f5; color: #fff; text-align: center; padding: 1rem;">One of One</div>
+//       </div>
+//     </div>
+//     <pre><code class="language-markup">
+// &lt;div class="third-only"&gt;
+// &lt;div&gt;One of One&lt;/div&gt;
+// &lt;/div&gt;
+//     </code></pre>
+//   </div>
+// </section>
+//
+// <style>
+//   pre {
+//     display: none;
+//   }
+//   .example-is-open + pre {
+//     display: block;
+//   }
+// </style>
+//
+// <script>
+//   (function() {
+//     var codeExamples = document.querySelectorAll('.has-code-example');
+//     for (var i = 0; i < codeExamples.length; i++) {
+//       codeExamples[i].addEventListener('click', function() {
+//         this.classList.toggle('example-is-open');
+//       });
+//     }
+//   })();
+// </script>
+ ?>
 
 
 <?php // if ( !is_user_logged_in() ) : ?>
