@@ -169,7 +169,7 @@
       </code></pre>
     </div>
   </section>
-  <section>
+  <section style="padding-top: 0;">
     <div class="site-width">
       <div class="centered">
         <h2>Centered Containers</h2>

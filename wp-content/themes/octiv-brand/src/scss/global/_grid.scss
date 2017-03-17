@@ -95,6 +95,12 @@ GRID
   .half-stack > div:nth-child(2n-1) {
     order: 2;
   }
+  .half-only > div {
+    flex-basis: calc(((100%/8) * 7) - 1rem);
+  }
+  .third-only > div {
+    flex-basis: calc(((100%/3) * 2) - 1rem);
+  }
 }
 @include bp(lg) {
   .three-fourth > div {
