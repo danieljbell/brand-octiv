@@ -1,110 +1,17 @@
 <?php get_header(); ?>
-  <?php get_header('logged-in'); ?>
-  <section class="callout-light">
-    <div class="site-width">
-      <h1>Heading Level 1</h1>
-      <h2>Heading Level 2</h2>
-      <h3>Heading Level 3</h3>
-      <h4>Heading Level 4</h4>
-      <h5>Heading Level 5</h5>
-      <h6>Heading Level 6</h6>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus unde distinctio consectetur qui voluptatum facilis numquam maiores, in eos delectus. Ipsa placeat vero minus quis!</p>
-      <a href="#0" class="btn-primary">Some Button</a>
-      <a href="#0" class="btn-arrow">Button Arrow</a>
-    </div>
-  </section>
-  <section class="callout-dark">
-    <div class="site-width">
-      <h1>Heading Level 1</h1>
-      <h2>Heading Level 2</h2>
-      <h3>Heading Level 3</h3>
-      <h4>Heading Level 4</h4>
-      <h5>Heading Level 5</h5>
-      <h6>Heading Level 6</h6>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus unde distinctio consectetur qui voluptatum facilis numquam maiores, in eos delectus. Ipsa placeat vero minus quis!</p>
-      <a href="#0" class="btn-primary">Some Button</a>
-      <a href="#0" class="btn-arrow">Button Arrow</a>
-    </div>
-  </section>
-  <section class="callout-brand">
-    <div class="site-width">
-      <h1>Heading Level 1</h1>
-      <h2>Heading Level 2</h2>
-      <h3>Heading Level 3</h3>
-      <h4>Heading Level 4</h4>
-      <h5>Heading Level 5</h5>
-      <h6>Heading Level 6</h6>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus unde distinctio consectetur qui voluptatum facilis numquam maiores, in eos delectus. Ipsa placeat vero minus quis!</p>
-      <a href="#0" class="btn-primary">Some Button</a>
-      <a href="#0" class="btn-arrow">Button Arrow</a>
-    </div>
-  </section>
-  <section class="callout-brand-two">
-    <div class="site-width">
-      <h1>Heading Level 1</h1>
-      <h2>Heading Level 2</h2>
-      <h3>Heading Level 3</h3>
-      <h4>Heading Level 4</h4>
-      <h5>Heading Level 5</h5>
-      <h6>Heading Level 6</h6>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus unde distinctio consectetur qui voluptatum facilis numquam maiores, in eos delectus. Ipsa placeat vero minus quis!</p>
-      <a href="#0" class="btn-primary">Some Button</a>
-      <a href="#0" class="btn-arrow">Button Arrow</a>
-    </div>
-  </section>
-  <section class="callout-brand-three">
-    <div class="site-width">
-      <h1>Heading Level 1</h1>
-      <h2>Heading Level 2</h2>
-      <h3>Heading Level 3</h3>
-      <h4>Heading Level 4</h4>
-      <h5>Heading Level 5</h5>
-      <h6>Heading Level 6</h6>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus unde distinctio consectetur qui voluptatum facilis numquam maiores, in eos delectus. Ipsa placeat vero minus quis!</p>
-      <a href="#0" class="btn-primary">Some Button</a>
-      <a href="#0" class="btn-arrow">Button Arrow</a>
-    </div>
-  </section>
-  <section class="callout-brand-four">
-    <div class="site-width">
-      <h1>Heading Level 1</h1>
-      <h2>Heading Level 2</h2>
-      <h3>Heading Level 3</h3>
-      <h4>Heading Level 4</h4>
-      <h5>Heading Level 5</h5>
-      <h6>Heading Level 6</h6>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus unde distinctio consectetur qui voluptatum facilis numquam maiores, in eos delectus. Ipsa placeat vero minus quis!</p>
-      <a href="#0" class="btn-primary">Some Button</a>
-      <a href="#0" class="btn-arrow">Button Arrow</a>
-    </div>
-  </section>
-  <section class="callout-brand-five">
-    <div class="site-width">
-      <h1>Heading Level 1</h1>
-      <h2>Heading Level 2</h2>
-      <h3>Heading Level 3</h3>
-      <h4>Heading Level 4</h4>
-      <h5>Heading Level 5</h5>
-      <h6>Heading Level 6</h6>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus unde distinctio consectetur qui voluptatum facilis numquam maiores, in eos delectus. Ipsa placeat vero minus quis!</p>
-      <a href="#0" class="btn-primary">Some Button</a>
-      <a href="#0" class="btn-arrow">Button Arrow</a>
-    </div>
-  </section>
-  <section class="callout-dark" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(//fillmurray.com/1920/600); box-shadow">
-    <div class="site-width">
-      <h1>Heading Level 1</h1>
-      <h2>Heading Level 2</h2>
-      <h3>Heading Level 3</h3>
-      <h4>Heading Level 4</h4>
-      <h5>Heading Level 5</h5>
-      <h6>Heading Level 6</h6>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus unde distinctio consectetur qui voluptatum facilis numquam maiores, in eos delectus. Ipsa placeat vero minus quis!</p>
-      <a href="#0" class="btn-primary">Some Button</a>
-      <a href="#0" class="btn-arrow">Button Arrow</a>
-    </div>
-  </section>
+
+<?php
+  $current_user = wp_get_current_user();
+?>
+
+<section class="hero">
+  <div class="site-width">
+    <h1>Welcome <?php if ($current_user->user_firstname) { echo $current_user->user_firstname . ', '; } ?>to the Octiv Design System!</h1>
+  </div>
+</section>
+
 <?php get_footer(); ?>
+
 
 <?php // GRID
 // <section>

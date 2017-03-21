@@ -1,3 +1,10 @@
+<?php
+  if ( !is_user_logged_in() ) :
+    header("Location: /wp-login.php");
+    exit;
+  endif;
+?>
+
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -38,3 +45,15 @@
   echo '<li style="display: inline-block;"><a href="' . site_url() . '/wp-admin/post.php?post=' . $post->ID . '&action=edit" class="btn-primary">Edit</a></li>';
   echo '</ul>';
   endif; ?>
+
+  <header>
+    <div class="site-width">
+      <div class="half">
+        <div>
+        <a href="/" title="Homepage" class="site-logo"></a></div>
+        <?php wp_nav_menu(); ?>
+      </div>
+    </div>
+  </header>
+
+  <main>

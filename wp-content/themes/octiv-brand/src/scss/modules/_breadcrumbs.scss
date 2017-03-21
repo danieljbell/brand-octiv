@@ -1,0 +1,22 @@
+.breadcrumb {
+  display: none;
+  background-color: $lgray;
+  border-bottom: 1px solid $mgray;
+  font-size: 0.85em;
+}
+.breadcrumb span > a,
+.breadcrumb span > strong, {
+  display: inline-block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+.breadcrumb span:first-child > a {
+  padding-left: 0;
+}
+@include bp(sm) {
+  .breadcrumb {
+    display: block;
+  }
+}

@@ -8,9 +8,11 @@ header {
   position: relative;
   z-index: 2;
 }
+header .half {
+  align-items: center;
+}
 header .half div {
   margin-bottom: 0;
-  text-align: center;
 }
 header .half div:last-child {
   margin-bottom: 2rem;
@@ -23,28 +25,24 @@ header .half div:last-child {
   height: 45px;
   margin: 2rem 0 1rem;
 }
-.header-number-container {
-  display: flex;
-  justify-content: center;
-  font-size: 1.25em;
+header .menu-header-container {
+  text-align: right;
 }
-.header-number-container img {
-  margin-right: 0.5rem;
-  height: 25px;
+.menu-header-container ul {
+  list-style-type: none;
+}
+.menu-header-container .sub-menu {
+  display: none;
+}
+.menu-header-container > ul > li:hover .sub-menu {
+  display: block;
 }
 @include bp(sm) {
-  header .half div {
-    text-align: initial;
-  }
   header .half div:last-child {
-    text-align: right;
     margin-bottom: 0;
   }
   .site-logo {
     background-position: initial;
     margin: 2rem 0 2rem;
-  }
-  .header-number-container {
-    justify-content: flex-end;
   }
 }

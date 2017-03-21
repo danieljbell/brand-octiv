@@ -1,0 +1,27 @@
+.sticky-sidebar h4 {
+  margin-bottom: 0;
+}
+.sticky-sidebar ul {
+  list-style-type: none;
+}
+.sticky-sidebar li {
+  margin-left: 0;
+}
+.sticky-sidebar a {
+  color: $gray;
+  border-bottom: 1px solid transparent;
+  transition: all 200ms ease-out;
+  &:hover {
+    color: $brand;
+    border-bottom: 1px solid $brand;
+  }
+}
+.stuck {
+  position: fixed;
+  top: 54px;
+  max-width: calc((1280px/4) - 1rem);
+}
+
+.stuck + div {
+  margin-left: calc((100%/4) + 1rem);
+}

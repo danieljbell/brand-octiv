@@ -31,6 +31,8 @@ gulp.task('css', function () {
 gulp.task('js', function () {
   gulp.src([
     'src/js/tables.js',
+    'src/js/code-example.js',
+    'src/js/sticky-sidebar.js',
     'src/js/base.js'
   ])
     .pipe(sourcemaps.init())
