@@ -25,17 +25,46 @@ header .half div:last-child {
   height: 45px;
   margin: 2rem 0 1rem;
 }
-header .menu-header-container {
-  text-align: right;
-}
-.menu-header-container ul {
+.menu-header-container > ul {
   list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  > li {
+    flex: 1;
+    a {
+      padding: 0.5rem;
+      border-radius: 5px;
+      color: $gray;
+      &:hover {
+        background-color: $brand;
+        color: $white;
+      }
+    }
+  }
 }
 .menu-header-container .sub-menu {
   display: none;
+  border: 1px solid $mgray;
+  border-radius: 5px;
+  margin-top: 0.4rem;
+  background-color: $lgray;
+  background-image: linear-gradient($white, $lgray);
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  list-style-type: none;
+  li {
+    margin: 0;
+    border-bottom: 1px solid $mgray;
+    a {
+      padding: 0.5rem;
+      display: block;
+      border-radius: 0;
+      width: 100%;
+    }
+  }
 }
 .menu-header-container > ul > li:hover .sub-menu {
   display: block;
+  position: absolute;
 }
 @include bp(sm) {
   header .half div:last-child {

@@ -6,6 +6,7 @@ body {
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.4;
+  overflow: hidden;
 }
 
 * {
@@ -15,14 +16,29 @@ body {
 }
 
 .login h1 a {
-  background-image: url(http://lp.octiv.com/rs/625-MXY-689/images/Octiv-Logo-Color.svg);
+  background-image: url(/wp-content/uploads/2017/03/Octiv-Logo-White.svg);
   background-size: 100%;
   width: 100%;
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.85));
+  margin-bottom: 0;
+}
+
+h1:after {
+  content: 'Design System';
+  font-weight: normal;
+  font-size: 2em;
+  display: block;
+  margin-top: -0.5rem;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.75);
 }
 
 #login {
-  position: relative;
-  padding-top: 15%;
+  position: absolute;
+  padding: 3rem;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #login:before {
@@ -59,19 +75,22 @@ body {
   display: none;
 }
 
-.login .button-primary {
+#wp-submit {
   float: none;
   display: block;
   width: 100%;
   margin-top: 1rem;
-  padding: 0.75rem 0.5rem !important;
+  padding: 0.75rem 0.5rem;
   background: #ed4c06;
   border: 0;
+  box-shadow: none;
   text-shadow: 0 -1px 1px #B23905, 1px 0 1px #B23905, 0 1px 1px #B23905, -1px 0 1px #B23905;
 }
-.login .button-primary:hover {
+
+#wp-submit:hover {
   background: #BE3D05;
 }
+
 .login #login_error,
 .login .message {
   border-radius: 5px;
@@ -90,6 +109,11 @@ video {
   right: 0;
   bottom: 0;
   z-index: -2;
-  height: 100vh;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-25%);
+}
+
+@media screen and (min-width: 768px) {
+  #wp-submit {
+    padding: 0.5rem 0 2rem;
+  }
 }
