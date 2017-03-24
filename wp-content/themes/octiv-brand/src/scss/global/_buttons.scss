@@ -17,6 +17,106 @@
     outline: 0;
     background-color: lighten($brand, 20%);
   }
+  &.brand-dark {
+    background-color: $gray;
+    &:hover, &:focus {
+      outline: 0;
+      background-color: lighten($gray, 20%);
+    }
+  }
+  &.brand-light {
+    background-color: $lgray;
+    color: $gray;
+    &:hover, &:focus {
+      outline: 0;
+      color: $white;
+      background-color: darken($lgray, 20%);
+    }
+  }
+  &.brand-two {
+    background-color: $brand2;
+    &:hover, &:focus {
+      outline: 0;
+      background-color: lighten($brand2, 20%);
+    }
+  }
+  &.brand-three {
+    background-color: $brand3;
+    &:hover, &:focus {
+      outline: 0;
+      background-color: lighten($brand3, 20%);
+    }
+  }
+  &.brand-four {
+    background-color: $brand4;
+    &:hover, &:focus {
+      outline: 0;
+      background-color: lighten($brand4, 20%);
+    }
+  }
+  &.brand-five {
+    background-color: $brand5;
+    &:hover, &:focus {
+      outline: 0;
+      background-color: lighten($brand5, 20%);
+    }
+  }
+}
+.btn-outline {
+  @extend %button;
+  border: 1px solid $brand;
+  &:hover, &:focus {
+    color: $white;
+    background-color: $brand;
+  }
+  &.brand-dark {
+    color: $gray;
+    border-color: $gray;
+    &:hover, &:focus {
+      color: $white;
+      background-color: $gray;
+    }
+  }
+  &.brand-light {
+    color: $white;
+    border-color: $white;
+    &:hover, &:focus {
+      color: $gray;
+      background-color: $white;
+    }
+  }
+  &.brand-two {
+    color: $brand2;
+    border-color: $brand2;
+    &:hover, &:focus {
+      color: $white;
+      background-color: $brand2;
+    }
+  }
+  &.brand-three {
+    color: $brand3;
+    border-color: $brand3;
+    &:hover, &:focus {
+      color: $white;
+      background-color: $brand3;
+    }
+  }
+  &.brand-four {
+    color: $brand4;
+    border-color: $brand4;
+    &:hover, &:focus {
+      color: $white;
+      background-color: $brand4;
+    }
+  }
+  &.brand-five {
+    color: $brand5;
+    border-color: $brand5;
+    &:hover, &:focus {
+      color: $white;
+      background-color: $brand5;
+    }
+  }
 }
 .btn-arrow {
   display: block;
@@ -27,10 +127,9 @@
   background-color: $brand2;
   border-radius: 5px;
   padding: 0.5rem 1rem;
-  &:after {
-    content: '>';
-    display: inline-block;
-    margin-left: 0.5rem;
+  &:hover, &:focus {
+    outline: 0;
+    background-color: lighten($brand2, 20%);
   }
   @include bp(md) {
     display: inline-block;
@@ -41,9 +140,123 @@
     box-shadow: inset 0 -2px 0 $brand2;
     padding: initial;
     padding-bottom: 2px;
+    &:after {
+      content: '>';
+      display: inline-block;
+      margin-left: 0.5rem;
+    }
     &:hover, &:focus {
       color: $white;
       box-shadow: inset 0 -38px 0 $brand2;
+    }
+  }
+  &.brand {
+    background-color: $brand;
+    &:hover, &:focus {
+      outline: 0;
+      background-color: lighten($brand, 20%);
+    }
+    @include bp(md) {
+      background-color: initial;
+      box-shadow: inset 0 -2px 0 $brand;
+      &:hover, &:focus {
+        box-shadow: inset 0 -38px 0 $brand;
+      }
+    }
+  }
+  &.brand-dark {
+    background-color: $gray;
+    @include bp(md) {
+      background-color: initial;
+      box-shadow: inset 0 -2px 0 $gray;
+      &:hover, &:focus {
+        box-shadow: inset 0 -38px 0 $gray;
+      }
+    }
+  }
+  &.brand-light {
+    background-color: $mgray;
+    @include bp(md) {
+      background-color: initial;
+      box-shadow: inset 0 -2px 0 $mgray;
+      &:hover, &:focus {
+        box-shadow: inset 0 -38px 0 $mgray;
+      }
+    }
+  }
+  &.brand-three {
+    background-color: $brand3;
+    @include bp(md) {
+      background-color: initial;
+      box-shadow: inset 0 -2px 0 $brand3;
+      &:hover, &:focus {
+        box-shadow: inset 0 -38px 0 $brand3;
+      }
+    }
+  }
+  &.brand-four {
+    background-color: $brand4;
+    @include bp(md) {
+      background-color: initial;
+      box-shadow: inset 0 -2px 0 $brand4;
+      &:hover, &:focus {
+        box-shadow: inset 0 -38px 0 $brand4;
+      }
+    }
+  }
+  &.brand-five {
+    background-color: $brand5;
+    @include bp(md) {
+      background-color: initial;
+      box-shadow: inset 0 -2px 0 $brand5;
+      &:hover, &:focus {
+        box-shadow: inset 0 -38px 0 $brand5;
+      }
+    }
+  }
+}
+.btn-group {
+  // &.half > div {
+  //   width: calc((100%/2) - 1rem);
+  //   margin-right: 2rem;
+  // }
+  &.half > div:first-child {
+    @include bp(sm) {
+      text-align: right;
+    }
+  }
+  &.half > div:last-child {
+    text-align: center;
+    @include bp(sm) {
+      text-align: initial;
+    }
+  }
+  // &.half > div:last-child {
+  //   margin-right: 0;
+  // }
+  .btn-primary {
+    @include bp(sm) {
+      display: inline-block;
+      width: initial;
+    }
+  }
+  .btn-arrow {
+    background-color: transparent;
+    color: $gray;
+    display: inline-block;
+    padding: initial;
+    padding-bottom: 2px;
+    margin-top: 0.5rem;
+    border-radius: 0;
+    box-shadow: inset 0 -2px 0 $brand2;
+    &:hover, &:focus {
+      color: $white;
+      box-shadow: inset 0 -38px 0 $brand2;
+    }
+    &:after {
+      content: '>';
+      display: inline-block;
+      margin-left: 0.5rem;
     }
   }
 }

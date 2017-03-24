@@ -136,3 +136,85 @@ function register_design_principle_post_type() {
   );
   register_post_type( 'design-principles', $args );
 }
+
+
+
+/*
+===================================
+REGISTER RESOURCES POST TYPE
+===================================
+*/
+add_action( 'init' , 'register_resources_post_type' );
+
+function register_resources_post_type() {
+  $labels = array(
+    'name'                => 'Resources',
+    'singular_name'       => 'Resource',
+    'add_new'             => 'Add New Resource',
+    'add_new_item'        => 'Add New Resource',
+    'edit_item'           => 'Edit Resource',
+    'new_item'            => 'New Resource',
+    'all_items'           => 'All Resources',
+    'view_item'           => 'View Resources',
+    'search_items'        => 'Search Resources',
+    'not_found'           => 'No Resource found',
+    'not_found_in_trash'  => 'No Resource found in Trash',
+    'parent_item_colon'   => '',
+    'menu_name'           => 'Resources'
+  );
+  $args = array(
+    'labels'      => $labels,
+    'public'             => true,
+    'has_archive' => true,
+    'menu_icon'   => 'dashicons-images-alt2',
+    'supports'    => array( 'title', 'editor', 'excerpt' ),
+    'capability_type' => 'features',
+    'map_meta_cap' => true,
+    'capabilities' => array(
+    // meta caps (don't assign these to roles)
+    'edit_post'              => 'edit_resource',
+    'read_post'              => 'read_resource',
+    'delete_post'            => 'delete_resource',
+    // primitive/meta caps
+    'create_posts'           => 'create_resources',
+    // primitive caps used outside of map_meta_cap()
+    'edit_posts'             => 'edit_resources',
+    'edit_others_posts'      => 'manage_resources',
+    'publish_posts'          => 'manage_resources',
+    'read_private_posts'     => 'read',
+    // primitive caps used inside of map_meta_cap()
+    'read'                   => 'read',
+    'delete_posts'           => 'manage_resources',
+    'delete_private_posts'   => 'manage_resources',
+    'delete_published_posts' => 'manage_resources',
+    'delete_others_posts'    => 'manage_resources',
+    'edit_private_posts'     => 'edit_resources',
+    'edit_published_posts'   => 'edit_resources'
+    ),
+  );
+  register_post_type( 'resources', $args );
+}
+/*
+==============================
+RESOURCES TAXONOMY
+==============================
+*/
+function resources_init() {
+    // create a new taxonomy
+    register_taxonomy(
+        'resources_type',
+        'resources',
+        array(
+            'label' => __( 'Resource Type' ),
+            'rewrite' => array( 'slug' => 'resources' ),
+            'hierarchical' => true,
+            'hasArchive' => true,
+            'show_ui' => true,
+            'capabilities' => array(
+                'assign_terms' => 'edit_resources',
+                'edit_terms' => 'publish_resources'
+            )
+        )
+    );
+}
+add_action( 'init', 'resources_init' );

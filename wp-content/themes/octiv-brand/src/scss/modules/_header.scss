@@ -68,12 +68,12 @@ header .half div:last-child {
   display: block;
   position: absolute;
 }
-.menu-header-container > ul > li:last-child:hover > .sub-menu {
-  right: 0;
-}
 .menu-header-container .sub-menu > li:hover .sub-menu {
   display: block;
   position: absolute;
+  left: 100%;
+  top: -0.4rem;
+  width: 100%;
 }
 @include bp(sm) {
   header .half div:last-child {

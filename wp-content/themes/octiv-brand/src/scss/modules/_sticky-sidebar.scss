@@ -6,6 +6,10 @@
 }
 .sticky-sidebar li {
   margin-left: 0;
+  &.active a {
+    font-weight: bold;
+    color: $brand;
+  }
 }
 .sticky-sidebar a {
   color: $gray;
