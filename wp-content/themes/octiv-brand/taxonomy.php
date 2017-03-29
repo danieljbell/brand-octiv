@@ -1,3 +1,5 @@
+<?php get_header(); ?>
+
 <?php
   $terms = get_terms(
     array(
@@ -6,8 +8,6 @@
     )
   );
 ?>
-
-<?php get_header(); ?>
 
 <section class="hero">
   <div class="site-width">

@@ -1,13 +1,14 @@
+<?php get_header(); ?>
+
 <?php
   $terms = get_terms(
     array(
       'taxonomy' => 'design_example_type',
+      'orderby' => 'term_id',
       'hide_empty' => false,
     )
   );
 ?>
-
-<?php get_header(); ?>
 
 <section class="hero">
   <div class="site-width">
@@ -48,7 +49,7 @@
             );
             $local_query = new WP_Query($args);
             if ($local_query->have_posts()) :
-              echo '<section style="padding-top: 0;">';
+              echo '<section id="' . $term->slug . '" style="padding-top: 0;">';
                 echo '<h3>' . $term->name . '</h3>';
                 echo '<div class="third">';
                 while ($local_query->have_posts()) :
