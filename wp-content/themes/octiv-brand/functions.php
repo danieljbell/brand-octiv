@@ -13,7 +13,7 @@ function my_login_logo() {
 		<script>
 			window.onload = start;
 
-			function start() {
+      function start() {
 				var video = document.createElement('video');
 				var container = document.querySelector('#login');
 				video.src = 'https://octiv.com/wp-content/themes/octiv2016/dist/video/hero-video.mp4';

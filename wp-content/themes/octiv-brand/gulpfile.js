@@ -33,6 +33,7 @@ gulp.task('js', function () {
     'src/js/tables.js',
     'src/js/code-example.js',
     'src/js/sticky-sidebar.js',
+    'src/js/cards.js',
     'src/js/base.js'
   ])
     .pipe(sourcemaps.init())
