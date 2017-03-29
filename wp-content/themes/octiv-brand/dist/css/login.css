@@ -15,7 +15,7 @@ body {
 }
 
 .login h1 a {
-  background-image: url(/wp-content/uploads/2017/03/Octiv-Logo-White.svg);
+  background-image: url(../img/Octiv-Logo-White.svg);
   background-size: 100%;
   width: 100%;
   filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.85));
