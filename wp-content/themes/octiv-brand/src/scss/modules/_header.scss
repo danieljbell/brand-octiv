@@ -8,13 +8,13 @@ header {
   position: relative;
   z-index: 2;
 }
-header .half {
+header .two-third-reversed {
   align-items: center;
 }
-header .half div {
+header .two-third-reversed div {
   margin-bottom: 0;
 }
-header .half div:last-child {
+header .two-third-reversed div:last-child {
   margin-bottom: 2rem;
 }
 .site-logo {
@@ -76,7 +76,7 @@ header .half div:last-child {
   width: 100%;
 }
 @include bp(sm) {
-  header .half div:last-child {
+  header .two-third-reversed div:last-child {
     margin-bottom: 0;
   }
   .site-logo {

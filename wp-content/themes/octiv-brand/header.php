@@ -48,7 +48,7 @@
 
   <header>
     <div class="site-width">
-      <div class="half">
+      <div class="two-third-reversed">
         <div>
         <a href="/" title="Homepage" class="site-logo"></a></div>
         <?php wp_nav_menu(); ?>
