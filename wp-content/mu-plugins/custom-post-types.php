@@ -218,3 +218,84 @@ function resources_init() {
     );
 }
 add_action( 'init', 'resources_init' );
+
+
+/*
+===================================
+REGISTER LANGUAUGE STYLE POST TYPE
+===================================
+*/
+add_action( 'init' , 'register_language_style_post_type' );
+
+function register_language_style_post_type() {
+  $labels = array(
+    'name'                => 'Language Styles',
+    'singular_name'       => 'Language Style',
+    'add_new'             => 'Add New Language Style',
+    'add_new_item'        => 'Add New Language Style',
+    'edit_item'           => 'Edit Language Style',
+    'new_item'            => 'New Language Style',
+    'all_items'           => 'All Language Styles',
+    'view_item'           => 'View Language Styles',
+    'search_items'        => 'Search Language Styles',
+    'not_found'           => 'No Language Style found',
+    'not_found_in_trash'  => 'No Language Style found in Trash',
+    'parent_item_colon'   => '',
+    'menu_name'           => 'Language Styles'
+  );
+  $args = array(
+    'labels'      => $labels,
+    'public'             => true,
+    'has_archive' => true,
+    'menu_icon'   => 'dashicons-images-alt2',
+    'supports'    => array( 'title', 'editor', 'excerpt' ),
+    'capability_type' => 'features',
+    'map_meta_cap' => true,
+    'capabilities' => array(
+    // meta caps (don't assign these to roles)
+    'edit_post'              => 'edit_language_style',
+    'read_post'              => 'read_language_style',
+    'delete_post'            => 'delete_language_style',
+    // primitive/meta caps
+    'create_posts'           => 'create_language_styles',
+    // primitive caps used outside of map_meta_cap()
+    'edit_posts'             => 'edit_language_styles',
+    'edit_others_posts'      => 'manage_language_styles',
+    'publish_posts'          => 'manage_language_styles',
+    'read_private_posts'     => 'read',
+    // primitive caps used inside of map_meta_cap()
+    'read'                   => 'read',
+    'delete_posts'           => 'manage_language_styles',
+    'delete_private_posts'   => 'manage_language_styles',
+    'delete_published_posts' => 'manage_language_styles',
+    'delete_others_posts'    => 'manage_language_styles',
+    'edit_private_posts'     => 'edit_language_styles',
+    'edit_published_posts'   => 'edit_language_styles'
+    ),
+  );
+  register_post_type( 'language-styles', $args );
+}
+/*
+==============================
+RESOURCES TAXONOMY
+==============================
+*/
+function language_styles_init() {
+    // create a new taxonomy
+    register_taxonomy(
+        'language_styles_type',
+        'language-styles',
+        array(
+            'label' => __( 'Language Styles Type' ),
+            'rewrite' => array( 'slug' => 'language-styles' ),
+            'hierarchical' => true,
+            'hasArchive' => true,
+            'show_ui' => true,
+            'capabilities' => array(
+                'assign_terms' => 'edit_language_styles',
+                'edit_terms' => 'publish_language_styles'
+            )
+        )
+    );
+}
+add_action( 'init', 'language_styles_init' );
