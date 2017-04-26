@@ -3,6 +3,26 @@ table {
   box-shadow: 0 0 25px rgba(0,0,0,0.1);
   border-radius: 5px;
   border-collapse: collapse;
+  &.dark-table th {
+    background-color: $gray;
+    background-image: linear-gradient(lighten($gray, 15%), $gray);
+  }
+  &.brand-two-table th {
+    background-color: $brand2;
+    background-image: linear-gradient(lighten($brand2, 15%), $brand2);
+  }
+  &.brand-three-table th {
+    background-color: $brand3;
+    background-image: linear-gradient(lighten($brand3, 15%), $brand3);
+  }
+  &.brand-four-table th {
+    background-color: $brand4;
+    background-image: linear-gradient(lighten($brand4, 15%), $brand4);
+  }
+  &.brand-five-table th {
+    background-color: $brand5;
+    background-image: linear-gradient(lighten($brand5, 15%), $brand5);
+  }
 }
 th, td {
   display: table-cell;
