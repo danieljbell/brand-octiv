@@ -55,6 +55,7 @@
                   $code = get_sub_field('section_code');
                   echo $code;
                   echo '<pre><code class="language-html">' . str_replace('<','&lt;',$code) . '</code></pre>';
+                  echo '<button class="expander btn-arrow">Expand Code</button>';
                 }
                 echo '</section>';
               endwhile;
