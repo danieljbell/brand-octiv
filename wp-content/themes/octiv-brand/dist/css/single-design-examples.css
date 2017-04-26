@@ -174,3 +174,9 @@ PAGE STYLES
 .examples-container .fourth > div:nth-child(4n) {
 	background-color: #fac500;
 }
+
+p code {
+	background-color: #eee;
+	padding: 5px;
+	font-size: 0.9em;
+}
