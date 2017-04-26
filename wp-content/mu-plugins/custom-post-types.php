@@ -27,7 +27,7 @@ function register_design_example_post_type() {
     'public'             => true,
     'has_archive' => true,
     'menu_icon'   => 'dashicons-media-text',
-    'supports'    => array( 'title', 'editor', 'excerpt' ),
+    'supports'    => array( 'title', 'excerpt' ),
     'capability_type' => 'features',
     'map_meta_cap' => true,
     'capabilities' => array(
@@ -109,7 +109,7 @@ function register_design_principle_post_type() {
     'public'             => true,
     'has_archive' => true,
     'menu_icon'   => 'dashicons-hammer',
-    'supports'    => array( 'title', 'editor', 'excerpt' ),
+    'supports'    => array( 'title', 'excerpt' ),
     'capability_type' => 'features',
     'map_meta_cap' => true,
     'capabilities' => array(
@@ -167,7 +167,7 @@ function register_resources_post_type() {
     'public'             => true,
     'has_archive' => true,
     'menu_icon'   => 'dashicons-images-alt2',
-    'supports'    => array( 'title', 'editor', 'excerpt' ),
+    'supports'    => array( 'title', 'excerpt' ),
     'capability_type' => 'features',
     'map_meta_cap' => true,
     'capabilities' => array(
@@ -248,7 +248,7 @@ function register_language_style_post_type() {
     'public'             => true,
     'has_archive' => true,
     'menu_icon'   => 'dashicons-images-alt2',
-    'supports'    => array( 'title', 'editor', 'excerpt' ),
+    'supports'    => array( 'title', 'excerpt' ),
     'capability_type' => 'features',
     'map_meta_cap' => true,
     'capabilities' => array(
