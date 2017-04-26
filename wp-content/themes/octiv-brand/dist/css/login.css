@@ -101,6 +101,10 @@ h1:after {
   display: none;
 }
 
+form#loginform p.galogin {
+  padding: 0.5rem 0;
+}
+
 video {
   position: absolute;
   top: 50%;
