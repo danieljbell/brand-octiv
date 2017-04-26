@@ -35,15 +35,10 @@
         if (scrollY > nextElemContainers[i].offsetTop - 54) {
           if (nextElemContainers[i+1]) {
             if (scrollY < (nextElemContainers[i+1].offsetTop - 54)) {
-              for (var i = 0; i < links.length; i++) {
-                links[i].classList.remove('active');
-              }
               elem.children[2].children[count].classList.add('active');
             } else {
               elem.children[2].children[count].classList.remove('active');
             }
-          } else {
-            elem.children[2].children[count].classList.add('active');
           }
         }
       }
