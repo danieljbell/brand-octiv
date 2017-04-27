@@ -20,12 +20,14 @@
     border-bottom: 1px solid $brand;
   }
 }
-.stuck {
-  position: fixed;
-  top: 54px;
-  max-width: calc((1280px/4) - 1rem);
-}
+@include bp(lg) {
+  .stuck {
+    position: fixed;
+    top: 54px;
+    max-width: calc((1280px/4) - 1rem);
+  }
 
-.stuck + div {
-  margin-left: calc((100%/4) + 1rem);
+  .stuck + div {
+    margin-left: calc((100%/4) + 1rem);
+  }  
 }

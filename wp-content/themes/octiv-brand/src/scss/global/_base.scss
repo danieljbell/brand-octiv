@@ -114,13 +114,20 @@ blockquote {
   padding: 1rem;
   font-style: italic;
   font-size: 1.15em;
-  line-height: 1.2;
+  margin: 2rem 0 1rem;
 }
 blockquote p {
   margin-top: 1rem;
   font-style: initial;
   font-size: 0.85em;
   opacity: 0.65;
+}
+blockquote img {
+  width: 100%;
+  max-width: 75px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 1rem;
 }
 blockquote strong, blockquote b,
 blockquote em, blockquote i {
@@ -153,5 +160,13 @@ blockquote strong, blockquote b {
   }
   .font-bump {
     font-size: 1.25em;
+  }
+  blockquote {
+    width: 40%;
+    float: right;
+    margin: 0 0 0 2rem;
+  }
+  blockquote img {
+    max-width: 100px;
   }
 }
