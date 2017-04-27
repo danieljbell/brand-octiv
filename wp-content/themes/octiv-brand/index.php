@@ -7,8 +7,35 @@
 <section class="hero">
   <div class="site-width">
     <h1>Welcome <?php if ($current_user->user_firstname) { echo $current_user->user_firstname . ', '; } ?>to the Octiv Design System!</h1>
+    <?php get_search_form(); ?>
   </div>
 </section>
+
+<section>
+  <div class="site-width">
+    <form action="">
+      <label for="thing">First Name</label>
+      <input type="text" id="thing">
+    </form>
+  </div>
+</section>
+
+<?php
+  if (is_search()) :
+    if (have_posts()) :
+      echo '<section><div class="site-width"><div class="third">';
+      while (have_posts()) :
+        the_post();
+          echo '<div class="card">';
+            echo '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
+            echo '<p>' . get_the_excerpt() . '</p>';
+            echo '<a href="' . get_the_permalink() . '" class="btn-arrow">Learn More</a>';
+          echo '</div>';
+      endwhile;
+      echo '</div></div></section>';
+    endif;
+  endif; // end search test
+?>
 
 <?php get_footer(); ?>
 

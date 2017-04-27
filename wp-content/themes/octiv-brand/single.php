@@ -71,37 +71,7 @@
   <section>
     <div class="site-width">
       <div class="two-third-only">
-        <h2>Things Similar to <?php echo get_the_title(); ?></h2>
-        <br>
-        <br>
-        <br>
-      </div>
-      <div class="third">
-        <?php
-          $args = array(
-            'post_type' => $post->post_type,
-            'post__not_in' => array($post->ID),
-            'tax_query' => array(
-              array(
-                'taxonomy' => str_replace('-','_',str_replace('examples','example',$post->post_type)) . '_type',
-                'field' => 'slug',
-                'terms' => $terms[0]->slug,
-              ),
-            ),
-          );
-          $query = new WP_Query($args);
-          if ($query->have_posts()) :
-            while ($query->have_posts()) :
-              $query->the_post();
-              echo '<div class="card">';
-                echo '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
-                echo '<p>' . the_excerpt() . '</p>';
-                echo '<a href="' . get_the_permalink() . '" class="btn-arrow">Learn More</a>';
-              echo '</div>';
-            endwhile;
-          endif;
-          wp_reset_query();
-        ?>
+        <div><?php comments_template(); ?> </div>
       </div>
     </div>
   </section>
