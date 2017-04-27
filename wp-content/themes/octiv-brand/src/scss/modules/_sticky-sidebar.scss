@@ -20,7 +20,13 @@
     border-bottom: 1px solid $brand;
   }
 }
+.sticky-sidebar {
+  display: none;
+}
 @include bp(lg) {
+  .sticky-sidebar {
+    display: initial;
+  }
   .stuck {
     position: fixed;
     top: 54px;
