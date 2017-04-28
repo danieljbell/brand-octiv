@@ -13,6 +13,10 @@ textarea {
 input[type='submit'] {
   @extend .btn-primary;
   border: 0;
+  font-size: 1rem;
+  width: auto !important;
+  margin: 0 auto;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 
 input[type='checkbox'] {
