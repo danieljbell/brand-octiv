@@ -56,6 +56,9 @@ function enqueue_global_css() {
   if (is_singular('design-examples')) {
     wp_enqueue_style('single-design-examples', get_stylesheet_directory_URI() . '/dist/css/single-design-examples.css', array(), '1.0.0');
   }
+  if (get_field('is_page_gallery')) {
+    wp_enqueue_style('single-gallery', get_stylesheet_directory_URI() . '/dist/css/single-gallery.css', array(), '1.0.0'); 
+  }
 }
 add_action('wp_enqueue_scripts', 'enqueue_global_css');
 
@@ -68,6 +71,9 @@ function enqueue_global_js() {
 	if (is_singular('design-examples')) {
 		wp_enqueue_script('prism', get_stylesheet_directory_URI() . '/src/js/_prism.js', array(), '1.0.0', true);
 	}
+  if (get_field('is_page_gallery')) {
+    wp_enqueue_script('download-icon', get_stylesheet_directory_URI() . '/src/js/download-icon.js', array(), '1.0.0', true); 
+  }
 	wp_enqueue_script('app', get_stylesheet_directory_URI() . '/dist/js/app.js', array(), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_global_js');

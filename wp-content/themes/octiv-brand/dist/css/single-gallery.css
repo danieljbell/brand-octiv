@@ -1,0 +1,49 @@
+.box svg {
+  max-width: 150px;
+  max-height: 150px;
+  padding: 1rem;
+}
+
+select {
+  margin-bottom: 1rem;
+  height: 2rem;
+  font-size: 1rem;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+}
+
+.btn-outline {
+  width: initial;
+  margin: 0 auto;
+}
+
+.is-black path {
+  fill: #000000;
+}
+
+.is-white path {
+  fill: #ffffff;
+}
+
+.is-orange path {
+  fill: #ed4c06;
+}
+
+.is-blue path {
+  fill: #42b0d8;
+}
+
+.is-green path {
+  fill: #33ab40;
+}
+
+.is-purple path {
+  fill: #b949f5;
+}
+
+.is-yellow path {
+  fill: #fac500;
+}
+
+canvas {
+  display: none;
+}

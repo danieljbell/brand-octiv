@@ -18,53 +18,83 @@
     </div>
   </section>
   <?php get_template_part('partials/display', 'breadcrumbs'); ?>
-  <section>
-    <div class="site-width">
-      <div class="three-fourth-reversed" style="align-items: flex-start;">
-        <div class="sticky-sidebar">
-          <h4><?php echo get_the_title(); ?></h4>
-          <hr>
-          <ul>
-            <?php
-              if (have_rows('page_section')) :
-                while(have_rows('page_section')) :
-                  the_row();
-                  echo '<li><a href="#' . strtolower(str_replace(' ','-',get_sub_field('section_title'))) . '">' . get_sub_field('section_title') . '</a></li>';
-                endwhile;
-              endif;
-            ?>
-          </ul>
-        </div>
-        <div class="examples-container">
+  <?php if (get_field('is_page_gallery')) : ?>
+    <section>
+      <div class="site-width">
+        <div class="fourth">
           <?php
-            if (have_rows('page_section')) :
-              $my_fields = get_field_object('page_section');
-              $count = (count($my_fields["value"]));
-              $i = 0;
-              while(have_rows('page_section')) :
-                $i++;
-                if ($i >= $count) {
-                  echo '<section style="padding: 0;">';
-                } else {
-                  echo '<section style="padding-top: 0;">';
-                }
-                the_row();
-                echo '<h3 id="' . strtolower(str_replace(' ','-',get_sub_field('section_title'))) . '">' . get_sub_field('section_title') . '</h3>';
-                echo '<p>' . get_sub_field('section_content') . '</p>';
-                if (get_sub_field('have_code')) {
-                  $code = get_sub_field('section_code');
-                  echo $code;
-                  echo '<pre><code class="language-html">' . str_replace('<','&lt;',$code) . '</code></pre>';
-                  echo '<button class="expander btn-arrow">Expand Code</button>';
-                }
-                echo '</section>';
-              endwhile;
+            $images = get_field('gallery_items');
+            if ($images) :
+              foreach($images as $image) :
+                echo '<div class="box centered">';
+                  echo file_get_contents($image['url']);
+                  echo '<select>';
+                    echo '<option value="black">Black</option>';
+                    echo '<option value="white">White</option>';
+                    echo '<option value="orange">Orange</option>';
+                    echo '<option value="blue">Blue</option>';
+                    echo '<option value="green">Green</option>';
+                    echo '<option value="purple">Purple</option>';
+                    echo '<option value="yellow">Yellow</option>';
+                  echo '</select>';
+                  echo '<button class="btn-outline">Download</button>';
+                  echo '<canvas id="canvas" width="500" height="500"></canvas>';
+                echo '</div>';
+              endforeach;
             endif;
           ?>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  <?php else : ?>
+    <section>
+      <div class="site-width">
+        <div class="three-fourth-reversed" style="align-items: flex-start;">
+          <div class="sticky-sidebar">
+            <h4><?php echo get_the_title(); ?></h4>
+            <hr>
+            <ul>
+              <?php
+                if (have_rows('page_section')) :
+                  while(have_rows('page_section')) :
+                    the_row();
+                    echo '<li><a href="#' . strtolower(str_replace(' ','-',get_sub_field('section_title'))) . '">' . get_sub_field('section_title') . '</a></li>';
+                  endwhile;
+                endif;
+              ?>
+            </ul>
+          </div>
+          <div class="examples-container">
+            <?php
+              if (have_rows('page_section')) :
+                $my_fields = get_field_object('page_section');
+                $count = (count($my_fields["value"]));
+                $i = 0;
+                while(have_rows('page_section')) :
+                  $i++;
+                  if ($i >= $count) {
+                    echo '<section style="padding: 0;">';
+                  } else {
+                    echo '<section style="padding-top: 0;">';
+                  }
+                  the_row();
+                  echo '<h3 id="' . strtolower(str_replace(' ','-',get_sub_field('section_title'))) . '">' . get_sub_field('section_title') . '</h3>';
+                  echo '<p>' . get_sub_field('section_content') . '</p>';
+                  if (get_sub_field('have_code')) {
+                    $code = get_sub_field('section_code');
+                    echo $code;
+                    echo '<pre><code class="language-html">' . str_replace('<','&lt;',$code) . '</code></pre>';
+                    echo '<button class="expander btn-arrow">Expand Code</button>';
+                  }
+                  echo '</section>';
+                endwhile;
+              endif;
+            ?>
+          </div>
+        </div>
+      </div>
+    </section>
+  <?php endif; ?>
   <div class="site-width">
     <hr>
   </div>
