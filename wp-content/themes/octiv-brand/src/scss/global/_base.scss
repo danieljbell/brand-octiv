@@ -98,6 +98,9 @@ ul li,
 ol li {
   margin-left: 1rem;
 }
+ol ol, ul ul, ol ul, ul ol {
+  margin-bottom: 0;
+}
 a {
   color: #ed4c06;
   text-decoration: none;
