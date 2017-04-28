@@ -31,6 +31,9 @@ header .two-third-reversed div:last-child {
   justify-content: flex-end;
   margin-bottom: 0;
   > li {
+    &:before {
+      display: none;
+    }
     flex: 1;
     position: relative;
     a {
@@ -54,6 +57,9 @@ header .two-third-reversed div:last-child {
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
   list-style-type: none;
   li {
+    &:before {
+      display: none;
+    }
     margin: 0;
     border-bottom: 1px solid $mgray;
     a {
