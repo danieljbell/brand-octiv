@@ -1,11 +1,35 @@
-input {
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+textarea {
   width: 100%;
-  padding: 1rem;
-  border: 1px solid $mgray;
+  padding: 0.5rem;
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
+  color: $gray;
+  margin-bottom: 1rem;
 }
 
-label {
-  display: block;
+input[type='submit'] {
+  @extend .btn-primary;
+  border: 0;
+}
+
+input[type='checkbox'] {
+  margin-right: 0.5rem;
+}
+
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid $mgray;
+  border-radius: 5px;
+  background-color: $white;
+  background-repeat: no-repeat;
+  background-position: 95%;
+  background-size: 20px;
+  &.fancy {
+    appearance: none;
+    background-image: url(../dist/img/select-arrow.svg);
+  }
 }
