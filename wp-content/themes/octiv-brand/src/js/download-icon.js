@@ -27,7 +27,10 @@
     });
   }
   for (var i=0; i<allDownloadButtons.length; i++) {
+
     allDownloadButtons[i].addEventListener('click', function() {
+      var imageColor = this.previousElementSibling.value.toUpperCase();
+      var imageTitle = this.dataset.title;
 
       var svg = this.parentElement.children[0];
       var canvas = this.nextElementSibling;
@@ -40,7 +43,7 @@
         });
 
         var a = document.createElement('a');
-        a.setAttribute('download', 'MY_COOL_IMAGE.png');
+        a.setAttribute('download', imageColor + '-' + imageTitle + '.png');
         a.setAttribute('href', imgURI);
         a.setAttribute('target', '_blank');
 
