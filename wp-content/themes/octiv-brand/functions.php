@@ -121,14 +121,14 @@ BREADCRUMB OVERRIDES
 add_filter( 'wpseo_breadcrumb_links', 'yoast_breadcrumb_overrides' );
 
 function yoast_breadcrumb_overrides( $links ) {
-    global $post;
-    if ( is_singular( array('design-examples') ) ) {
-				$array = wp_get_post_terms($post->ID, 'design_example_type');
-				$breadcrumb[] = array(
-						'url' => '/' . $post->post_type . '/#' . $array[0]->slug,
-						'text' => $array[0]->name,
-				);
-				array_splice( $links, 2, 0, $breadcrumb );
-    }
-    return $links;
+  global $post;
+  if ( is_singular( array('design-examples') ) ) {
+		$array = wp_get_post_terms($post->ID, 'design_example_type');
+		$breadcrumb[] = array(
+			'url' => '/' . $post->post_type . '/#' . $array[0]->slug,
+			'text' => $array[0]->name,
+		);
+		array_splice( $links, 2, 0, $breadcrumb );
+  }
+  return $links;
 }
