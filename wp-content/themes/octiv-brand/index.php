@@ -17,8 +17,9 @@
 
 <?php
   if (is_search()) :
+    echo '<section><div class="site-width">';
     if (have_posts()) :
-      echo '<section><div class="site-width"><div class="third">';
+      echo '<div class="third">';
       while (have_posts()) :
         the_post();
           echo '<div class="card">';
@@ -27,8 +28,11 @@
             echo '<a href="' . get_the_permalink() . '" class="btn-arrow">Learn More</a>';
           echo '</div>';
       endwhile;
-      echo '</div></div></section>';
+      echo '</div>';
+    else :
+      echo 'Sorry, nothing was found for ' . get_search_query() . '.';
     endif;
+    echo '</div></section>';
   endif; // end search test
 ?>
 
