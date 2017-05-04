@@ -12,7 +12,7 @@
       <h1><?php echo get_the_title(); ?></h1>
       <div class="two-third-only">
         <div style="margin-bottom: 0;">
-          <p class="font-bump" style="margin-bottom: 0;"><?php echo get_the_content(); ?></p>
+          <p class="font-bump" style="margin-bottom: 0;"><?php echo get_the_excerpt(); ?></p>
         </div>
       </div>
     </div>
@@ -153,5 +153,5 @@
     </style>
     ';
   } ?>
-  
+
 <?php get_footer(); ?>

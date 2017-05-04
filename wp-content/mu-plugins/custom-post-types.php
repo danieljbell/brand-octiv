@@ -299,3 +299,61 @@ function language_styles_init() {
     );
 }
 add_action( 'init', 'language_styles_init' );
+
+
+
+/*
+===================================
+REGISTER DATASHEET POST TYPE
+===================================
+*/
+add_action( 'init' , 'register_datasheet_post_type' );
+
+function register_datasheet_post_type() {
+  $labels = array(
+    'name'                => 'Datasheets',
+    'singular_name'       => 'Datasheet',
+    'add_new'             => 'Add New Datasheet',
+    'add_new_item'        => 'Add New Datasheet',
+    'edit_item'           => 'Edit Datasheet',
+    'new_item'            => 'New Datasheet',
+    'all_items'           => 'All Datasheets',
+    'view_item'           => 'View Datasheets',
+    'search_items'        => 'Search Datasheets',
+    'not_found'           => 'No Datasheet found',
+    'not_found_in_trash'  => 'No Datasheet found in Trash',
+    'parent_item_colon'   => '',
+    'menu_name'           => 'Datasheets'
+  );
+  $args = array(
+    'labels'      => $labels,
+    'public'             => true,
+    'has_archive' => true,
+    'menu_icon'   => 'dashicons-format-aside',
+    'supports'    => array( 'title', 'excerpt', 'comments', ),
+    'capability_type' => 'features',
+    'map_meta_cap' => true,
+    'capabilities' => array(
+    // meta caps (don't assign these to roles)
+    'edit_post'              => 'edit_datasheet',
+    'read_post'              => 'read_datasheet',
+    'delete_post'            => 'delete_datasheet',
+    // primitive/meta caps
+    'create_posts'           => 'create_datasheets',
+    // primitive caps used outside of map_meta_cap()
+    'edit_posts'             => 'edit_datasheets',
+    'edit_others_posts'      => 'manage_datasheets',
+    'publish_posts'          => 'manage_datasheets',
+    'read_private_posts'     => 'read',
+    // primitive caps used inside of map_meta_cap()
+    'read'                   => 'read',
+    'delete_posts'           => 'manage_datasheets',
+    'delete_private_posts'   => 'manage_datasheets',
+    'delete_published_posts' => 'manage_datasheets',
+    'delete_others_posts'    => 'manage_datasheets',
+    'edit_private_posts'     => 'edit_datasheets',
+    'edit_published_posts'   => 'edit_datasheets'
+    ),
+  );
+  register_post_type( 'datasheets', $args );
+}
