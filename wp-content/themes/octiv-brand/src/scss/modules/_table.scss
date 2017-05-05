@@ -45,6 +45,7 @@ thead th {
 }
 tbody {
   border: 1px solid $mgray;
+  border-radius: 0 0 5px 5px;
 }
 tbody tr:nth-child(2n) td {
   background-color: $lgray;
@@ -52,6 +53,12 @@ tbody tr:nth-child(2n) td {
 tbody td:nth-child(2n) {
   border-left: 1px solid $mgray;
   border-right: 1px solid $mgray;
+}
+tbody tr:last-child td:first-child {
+  border-radius: 0 0 0 5px;
+}
+tbody tr:last-child td:last-child {
+  border-radius: 0 0 5px 0;
 }
 .table-data-cells th,
 .table-data-cells td {
