@@ -6,7 +6,7 @@
         <div style="margin-bottom: 0;">
           <p class="font-bump"><?php echo get_the_excerpt(); ?></p>
           <div class="half-only no-print">
-            <div><a href="https://octiv.com/wp-content/uploads/2017/05/Octiv-Redlining.pdf" class="btn-outline brand-light">Get the External Datasheet</a></div>
+            <div><a href="<?php echo get_field('external_datasheet_url'); ?>" class="btn-outline brand-light">Get the External Datasheet</a></div>
           </div>
         </div>
       </div>
