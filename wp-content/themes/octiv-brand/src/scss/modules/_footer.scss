@@ -1,0 +1,49 @@
+footer {
+  border-top: 1px solid $mgray;
+  padding-top: 2rem;
+}
+
+footer .site-logo {
+  max-width: 125px;
+  margin: 0;
+}
+
+footer ul {
+  display: flex;
+}
+footer li {
+  flex: 1;
+  list-style-type: none;
+}
+
+footer .menu > li.menu-item a {
+  font-size: 1.15em;
+  color: $gray;
+  font-weight: bold;
+  opacity: 0.65;
+}
+
+footer .sub-menu {
+  display: block;
+}
+footer ul ul li {
+  margin: 0;
+}
+footer .sub-menu>li.menu-item a {
+  font-size: 0.9em;
+  font-weight: normal;
+}
+
+footer .sub-menu li:before {
+  display: none;
+}
+
+.sub-footer {
+  border-top: 1px solid $mgray;
+  font-size: 0.9em;
+  padding: 0.5rem 0;
+  text-align: center;
+  @include bp(md) {
+    text-align: right;
+  }
+}

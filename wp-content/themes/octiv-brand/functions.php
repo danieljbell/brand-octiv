@@ -116,7 +116,8 @@ CREATING ADMIN NAV MENUS
 ==========================================
 */
 register_nav_menus( array(
-		'header' => __( 'Header' )
+		'header' => __( 'Header' ),
+    'footer' => __( 'Footer' )
 ) );
 
 /*
