@@ -5,9 +5,11 @@
       <div class="two-third-only">
         <div style="margin-bottom: 0;">
           <p class="font-bump"><?php echo get_the_excerpt(); ?></p>
-          <div class="half-only no-print">
-            <div><a href="<?php echo get_field('external_datasheet_url'); ?>" class="btn-outline brand-light">Get the External Datasheet</a></div>
-          </div>
+          <?php if (get_field('external_datasheet_url')) : ?>
+            <div class="half-only no-print">
+              <div><a href="<?php echo get_field('external_datasheet_url'); ?>" class="btn-outline brand-light">Get the External Datasheet</a></div>
+            </div>
+          <?php endif; ?>
         </div>
       </div>
     </div>
