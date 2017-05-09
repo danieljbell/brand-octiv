@@ -7,21 +7,16 @@ document.body.addEventListener('keydown', function(e) {
     solutionHeading.parentElement.style.padding = 0;
 
     var differentHeading = document.querySelector('#different h3');
-    differentHeading.remove();
+    if (differentHeading) {
+        differentHeading.remove();
+    }
 
-    var pageType = document.createElement('div');
-    var logoMark = document.createElement('img');
-    pageType.classList.add('callout-brand-two');
-    pageType.classList.add('page-type');
-    pageType.innerHTML = '<p>Datasheet</p>';
-    logoMark.src = './wp-content/themes/octiv-brand/dist/img/Octiv-Mark.svg';
-    // console.dir(logoMark);
-    pageType.appendChild(logoMark);
-    document.querySelector('header').appendChild(pageType);
+    var logoMark = document.querySelectorAll('.page-type path');
+    for (var i = 0; i < logoMark.length; i++) {
+      logoMark[i].style.fill = '#ffffff';
+    }
 
-    setTimeout(function() {
-      window.print();
-    }, 300);
+    window.print();
 
   }
 });

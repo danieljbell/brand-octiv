@@ -1,4 +1,9 @@
 <?php get_header(); ?>
+<div class="print-only callout-brand-two page-type">
+  <p>Datasheet</p>
+  <?php echo file_get_contents('./wp-content/themes/octiv-brand/dist/img/Octiv-Mark.svg'); ?>
+</div>
+
   <section class="hero">
     <div class="site-width">
       <h1><?php echo get_the_title(); ?></h1>
@@ -75,6 +80,25 @@
               ?>
             </section>
             <div style="page-break-after: always;" class="page-break"></div>
+            <section class="print-only hero">
+              <div class="site-width">
+                <h1><?php echo get_the_title(); ?></h1>
+                <div class="two-third-only">
+                  <div style="margin-bottom: 0;">
+                    <p class="font-bump"><?php echo get_the_excerpt(); ?></p>
+                    <?php if (get_field('external_datasheet_url')) : ?>
+                      <div class="half-only no-print">
+                        <div><a href="<?php echo get_field('external_datasheet_url'); ?>" class="btn-outline brand-light">Get the External Datasheet</a></div>
+                      </div>
+                    <?php endif; ?>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="print-only callout-brand-two page-type">
+              <p>Datasheet</p>
+              <?php echo file_get_contents('./wp-content/themes/octiv-brand/dist/img/Octiv-Mark.svg'); ?>
+            </div>
             <section id="capabilities" style="padding: 0;">
               <?php
                 if (have_rows('key_capabilities')) :
