@@ -83,13 +83,13 @@ header .two-third-reversed div:last-child {
   width: 100%;
 }
 .menu-header-container .sub-menu > li:nth-child(2):hover .sub-menu {
-  top: 2.2rem;
+  top: 2.0rem;
 }
 .menu-header-container .sub-menu > li:nth-child(3):hover .sub-menu {
   top: 4.4rem;
 }
 .menu-header-container .sub-menu > li:nth-child(4):hover .sub-menu {
-  top: 6.6rem;
+  top: 6.8rem;
 }
 @include bp(sm) {
   header .two-third-reversed div:last-child {

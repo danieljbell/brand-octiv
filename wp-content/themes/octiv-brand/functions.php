@@ -49,7 +49,7 @@ ADD GLOBAL CSS TO PAGE
 ==============================
 */
 function enqueue_global_css() {
-	wp_enqueue_style('style', get_stylesheet_directory_URI() . '/dist/css/style.css', array(), '1.0.1');
+	wp_enqueue_style('style', get_stylesheet_directory_URI() . '/dist/css/style.css', array(), '1.0.2');
   if (is_single()) {
     wp_enqueue_style('single', get_stylesheet_directory_URI() . '/dist/css/single.css', array(), '1.0.0');
   }
