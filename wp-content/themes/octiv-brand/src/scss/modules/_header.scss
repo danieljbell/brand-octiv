@@ -56,6 +56,7 @@ header .two-third-reversed div:last-child {
   background-image: linear-gradient($white, $lgray);
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
   list-style-type: none;
+  position: relative;
   li {
     &:before {
       display: none;
@@ -80,6 +81,15 @@ header .two-third-reversed div:last-child {
   right: 100%;
   top: -0.4rem;
   width: 100%;
+}
+.menu-header-container .sub-menu > li:nth-child(2):hover .sub-menu {
+  top: 2.2rem;
+}
+.menu-header-container .sub-menu > li:nth-child(3):hover .sub-menu {
+  top: 4.4rem;
+}
+.menu-header-container .sub-menu > li:nth-child(4):hover .sub-menu {
+  top: 6.6rem;
 }
 @include bp(sm) {
   header .two-third-reversed div:last-child {
