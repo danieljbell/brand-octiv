@@ -357,3 +357,60 @@ function register_datasheet_post_type() {
   );
   register_post_type( 'datasheets', $args );
 }
+
+
+/*
+===================================
+REGISTER HEAD-TO-HEAD POST TYPE
+===================================
+*/
+add_action( 'init' , 'register_head_to_head_post_type' );
+
+function register_head_to_head_post_type() {
+  $labels = array(
+    'name'                => 'Head-to-Heads',
+    'singular_name'       => 'Head-to-Head',
+    'add_new'             => 'Add New Head-to-Head',
+    'add_new_item'        => 'Add New Head-to-Head',
+    'edit_item'           => 'Edit Head-to-Head',
+    'new_item'            => 'New Head-to-Head',
+    'all_items'           => 'All Head-to-Heads',
+    'view_item'           => 'View Head-to-Heads',
+    'search_items'        => 'Search Head-to-Heads',
+    'not_found'           => 'No Head-to-Head found',
+    'not_found_in_trash'  => 'No Head-to-Head found in Trash',
+    'parent_item_colon'   => '',
+    'menu_name'           => 'Head-to-Heads'
+  );
+  $args = array(
+    'labels'      => $labels,
+    'public'             => true,
+    'has_archive' => true,
+    'menu_icon'   => 'dashicons-format-aside',
+    'supports'    => array( 'title', 'excerpt', 'comments', ),
+    'capability_type' => 'features',
+    'map_meta_cap' => true,
+    'capabilities' => array(
+    // meta caps (don't assign these to roles)
+    'edit_post'              => 'edit_head_to_head',
+    'read_post'              => 'read_head_to_head',
+    'delete_post'            => 'delete_head_to_head',
+    // primitive/meta caps
+    'create_posts'           => 'create_head_to_heads',
+    // primitive caps used outside of map_meta_cap()
+    'edit_posts'             => 'edit_head_to_heads',
+    'edit_others_posts'      => 'manage_head_to_heads',
+    'publish_posts'          => 'manage_head_to_heads',
+    'read_private_posts'     => 'read',
+    // primitive caps used inside of map_meta_cap()
+    'read'                   => 'read',
+    'delete_posts'           => 'manage_head_to_heads',
+    'delete_private_posts'   => 'manage_head_to_heads',
+    'delete_published_posts' => 'manage_head_to_heads',
+    'delete_others_posts'    => 'manage_head_to_heads',
+    'edit_private_posts'     => 'edit_head_to_heads',
+    'edit_published_posts'   => 'edit_head_to_heads'
+    ),
+  );
+  register_post_type( 'head-to-head', $args );
+}
