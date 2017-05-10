@@ -387,7 +387,7 @@ function register_head_to_head_post_type() {
     'public'             => true,
     'has_archive' => true,
     'menu_icon'   => 'dashicons-format-aside',
-    'supports'    => array( 'title', 'excerpt', 'comments', ),
+    'supports'    => array( 'title', 'excerpt', 'comments', 'editor'),
     'capability_type' => 'features',
     'map_meta_cap' => true,
     'capabilities' => array(
