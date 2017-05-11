@@ -12,24 +12,23 @@
 
 <section>
   <div class="site-width">
-    <?php
-      if (is_search()) :
-        if (have_posts()) :
-          echo '<div class="third">';
-          while (have_posts()) :
-            the_post();
-              echo '<div class="card">';
-                echo '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
-                echo '<p>' . get_the_excerpt() . '</p>';
-                echo '<a href="' . get_the_permalink() . '" class="btn-arrow">Learn More</a>';
-              echo '</div>';
-          endwhile;
-          echo '</div>';
-        else :
-          echo 'Sorry, nothing was found for ' . get_search_query() . '.';
-        endif;
-      endif; // end search test
-    ?>
+    <div class="third">
+      <div>
+        <h2>Who</h2>
+        <p>Octiv provides document generation and contract management solutions.</p>
+      </div>
+      <div>
+        <h2>What</h2>
+        <p>Our software solutions allow customers to create, share, sign and store documents, increasing efficiency, accuracy and saving time.</p>
+      </div>
+      <div>
+        <h2>Why</h2>
+        <p>Octiv’s goal is to save customers time, allow them to close deals faster and deliver business results.</p>
+      </div>
+      <div>
+        <h2></h2>
+      </div>
+    </div>
   </div>
 </section>
 
