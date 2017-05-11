@@ -7,11 +7,6 @@
 <section class="hero">
   <div class="site-width">
     <h1>Welcome <?php if ($current_user->user_firstname) { echo $current_user->user_firstname . ', '; } ?>to Octiv's Brand Guidelines!</h1>
-    <div class="half-only">
-      <div>
-        <?php get_search_form(); ?>
-      </div>
-    </div>
   </div>
 </section>
 
