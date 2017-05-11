@@ -47,7 +47,7 @@
               endwhile;
             endif;
           ?>
-          <section style="padding-top: 0;">
+          <section>
             <h3 id="key-capabilities">Key Capabilities</h3>
             <table class="table-data-cells">
               <thead>
