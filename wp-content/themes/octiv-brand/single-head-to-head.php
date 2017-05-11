@@ -32,7 +32,7 @@
           </section>
           <?php
             if (have_rows('why_octiv')) :
-              echo '<h3 id="why-octiv">Why Choose Octiv Over Conga</h3>';
+              echo '<h3 id="why-octiv">Why Choose Octiv Over ' . get_the_title() . '</h3>';
               while(have_rows('why_octiv')) :
                 echo '<section style="padding: 0;">';
                 the_row(); ?>
