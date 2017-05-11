@@ -14,15 +14,8 @@
         this.previousElementSibling.src = imgSRC;
       }
       var downloadButton = this.parentElement.querySelector('a');
-      downloadButton.href = imgSRC;
+      downloadButton.href = imgSRC.replace('-300x169', '');
     });
   }
 
-  // for (var i = 0; i < allDownloadButtons.length; i++) {
-  //   allDownloadButtons[i].addEventListener('click', function(e) {
-  //     e.preventDefault();
-  //     var img = this.parentElement.querySelector('img');
-  //     this.href = img;
-  //   });
-  // }
 })();

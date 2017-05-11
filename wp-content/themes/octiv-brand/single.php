@@ -29,7 +29,7 @@
                 foreach($images as $image) :
                   echo '<div class="box centered">';
                   echo '<h4>' . $image[title] . '</h4>';
-                    echo '<img src="' . $image[url] . '" alt="' . $image[title] . '">';
+                    echo '<img src="' . $image[sizes][medium] . '" alt="' . $image[title] . '">';
                     echo '<select>';
                       echo '<option value="non-branded">Non-Branded</option>';
                       echo '<option value="branded">Branded</option>';
