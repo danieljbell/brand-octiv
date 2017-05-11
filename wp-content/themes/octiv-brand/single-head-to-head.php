@@ -4,7 +4,7 @@
       <h1><?php echo get_the_title(); ?></h1>
       <div class="third-only">
         <div>
-          <a href="#0" class="btn-outline brand-light">Download the Head-to-Head</a>
+          <a href="<?php echo get_field('pdf_url'); ?>" class="btn-outline brand-light">Download the Head-to-Head</a>
         </div>
       </div>
     </div>
@@ -17,43 +17,93 @@
           <h4><?php echo get_the_title(); ?></h4>
           <hr>
           <ul>
-            <li>Overview</li>
-            <?php
-              if (have_rows('page_section')) :
-                while(have_rows('page_section')) :
-                  the_row();
-                  echo '<li><a href="#' . strtolower(str_replace(' ','-',get_sub_field('section_title'))) . '">' . get_sub_field('section_title') . '</a></li>';
-                endwhile;
-              endif;
-            ?>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#why-octiv">Why Octiv</a></li>
+            <li><a href="#key-capabilities">Key Capabilities</a></li>
           </ul>
         </div>
         <div class="examples-container">
+          <section style="padding-top: 0;">
+            <h3 id="overview">Overview</h3>
+            <blockquote class="font-bump">
+              <strong><?php echo get_field('head_to_head_highlight'); ?></strong>
+            </blockquote>
+            <?php the_content(); ?>
+          </section>
           <?php
-            if (have_rows('page_section')) :
-              $my_fields = get_field_object('page_section');
-              $count = (count($my_fields["value"]));
-              $i = 0;
-              while(have_rows('page_section')) :
-                $i++;
-                if ($i >= $count) {
-                  echo '<section style="padding: 0;">';
-                } else {
-                  echo '<section style="padding-top: 0;">';
-                }
-                the_row();
-                echo '<h3 id="' . strtolower(str_replace(' ','-',get_sub_field('section_title'))) . '">' . get_sub_field('section_title') . '</h3>';
-                echo '<p>' . get_sub_field('section_content') . '</p>';
-                if (get_sub_field('have_code')) {
-                  $code = get_sub_field('section_code');
-                  echo $code;
-                  echo '<pre><code class="language-html">' . str_replace('<','&lt;',$code) . '</code></pre>';
-                  echo '<button class="expander btn-arrow">Expand Code</button>';
-                }
-                echo '</section>';
+            if (have_rows('why_octiv')) :
+              echo '<h3 id="why-octiv">Why Choose Octiv Over Conga</h3>';
+              while(have_rows('why_octiv')) :
+                echo '<section style="padding: 0;">';
+                the_row(); ?>
+                <div style="display: flex;">
+                  <div class="why-octiv-icon" style="width: 100%; max-width: 50px; margin-right: 1rem;"><?php echo file_get_contents(get_sub_field('why_octiv_icon')); ?></div>
+                  <div>
+                    <h4><?php echo get_sub_field('why_octiv_title'); ?></h4>
+                    <p><?php echo get_sub_field('why_octiv_description'); ?></p>
+                  </div>
+                </div>
+          <?php  echo '</section>';
               endwhile;
             endif;
           ?>
+          <section>
+            <h3 id="key-capabilities">Key Capabilities</h3>
+            <table class="table-data-cells">
+              <thead>
+                <tr>
+                  <th style="width: 70%;">Key Capability</th>
+                  <th style="width: 15%;">Octiv</th>
+                  <th style="width: 15%;"><?php echo get_the_title(); ?></th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                  if (have_rows('key_capabilities')) :
+                    while(have_rows('key_capabilities')) :
+                      echo '<tr>';
+                      the_row();
+                      echo '<td><strong>' . get_sub_field('key_capability_title') . '</strong><br>' . get_sub_field('key_capability_description') . '</td>';
+                      echo '<td>';
+                        if (get_sub_field('octiv_functionality') == 'full') {
+                          echo '<div class="full-functionality"></div>';
+                        }
+                        if (get_sub_field('octiv_functionality') == 'limited') {
+                          echo '<div class="limited-functionality"></div>';
+                        }
+                        if (get_sub_field('octiv_functionality') == 'no') {
+                          echo '<div class="no-functionality"></div>';
+                        }
+                        if (get_sub_field('octiv_functionality_note')) {
+                          echo '<em style="font-size: 0.75em;">* ' . get_sub_field('octiv_functionality_details') . '</em>';
+                        }
+                      echo '</td>';
+                      echo '<td>';
+                        if (get_sub_field('competitor_functionality') == 'full') {
+                          echo '<div class="full-functionality"></div>';
+                        }
+                        if (get_sub_field('competitor_functionality') == 'limited') {
+                          echo '<div class="limited-functionality"></div>';
+                        }
+                        if (get_sub_field('competitor_functionality') == 'no') {
+                          echo '<div class="no-functionality"></div>';
+                        }
+                        if (get_sub_field('competitor_functionality_note')) {
+                          echo '<em style="font-size: 0.75em;">* ' . get_sub_field('competitor_functionality_details') . '</em>';
+                        }
+                      echo '</td>';
+                      echo '</tr>';
+                    endwhile;
+                  endif;
+                ?>
+                <!-- <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                </tr> -->
+              </tbody>
+            </table>
+          </section>
         </div>
       </div>
     </div>
@@ -69,52 +119,26 @@
     </div>
   </section>
 
-  <?php if (is_single('Standard Grid') || is_single('Centered Grid') || is_single('Stack Order Grid')) {
-    echo '
-    <style>
-      /*
-      ==============================
-      PAGE STYLES
-      ==============================
-      */
-      .examples-container .half > div,
-      .examples-container .half-stack > div,
-      .examples-container .half-only > div,
-      .examples-container .third > div,
-      .examples-container .third-only > div,
-      .examples-container .fourth > div,
-      .examples-container .two-third > div,
-      .examples-container .two-third-reversed > div,
-      .examples-container .two-third-stack > div,
-      .examples-container .two-third-only > div,
-      .examples-container .three-fourth > div,
-      .examples-container .three-fourth-reversed > div {
-        border-radius: 5px;
-        background-color: #42b0d8;
-        color: #fff;
-        text-align: center;
-        padding: 1rem;
-      }
-      .examples-container .half > div:nth-child(2n),
-      .examples-container .half-stack > div:nth-child(2n),
-      .examples-container .third > div:nth-child(2n),
-      .examples-container .fourth > div:nth-child(2n),
-      .examples-container .two-third > div:nth-child(2n),
-      .examples-container .two-third-reversed > div:nth-child(2n),
-      .examples-container .two-third-stack > div:nth-child(2n),
-      .examples-container .three-fourth > div:nth-child(2n),
-      .examples-container .three-fourth-reversed > div:nth-child(2n) {
-        background-color: #33ab40;
-      }
-      .examples-container .third > div:nth-child(3n),
-      .examples-container .fourth > div:nth-child(3n) {
-        background-color: #b949f5;
-      }
-      .examples-container .fourth > div:nth-child(4n) {
-        background-color: #fac500;
-      }
-    </style>
-    ';
-  } ?>
+
+  <style>
+    .why-octiv-icon {
+      fill: #ed4c06;
+    }
+    [class*='functionality'] {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    .full-functionality {
+      background-color: #33ab40;
+    }
+    .limited-functionality {
+      background-color: #fac500;
+    }
+    .no-functionality {
+      background-color: #ed4c06;
+    }
+  </style>
 
 <?php get_footer(); ?>
