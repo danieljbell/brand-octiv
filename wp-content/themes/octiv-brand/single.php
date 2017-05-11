@@ -23,25 +23,44 @@
       <div class="site-width">
         <div class="fourth">
           <?php
-            $images = get_field('gallery_items');
-            if ($images) :
-              foreach($images as $image) :
-                echo '<div class="box centered">';
-                  echo file_get_contents($image['url']);
-                  echo '<select>';
-                    echo '<option value="black">Black</option>';
-                    echo '<option value="white">White</option>';
-                    echo '<option value="orange">Orange</option>';
-                    echo '<option value="blue">Blue</option>';
-                    echo '<option value="green">Green</option>';
-                    echo '<option value="purple">Purple</option>';
-                    echo '<option value="yellow">Yellow</option>';
-                  echo '</select>';
-                  echo '<button class="btn-outline" data-title="' . str_replace(".svg", "", $image['filename']) . '">Download</button>';
-                  echo '<canvas id="canvas" width="500" height="500"></canvas>';
-                echo '</div>';
-              endforeach;
-            endif;
+            if (get_field('gallery_type') == 'photos') {
+              $images = get_field('gallery_items');
+              if ($images) :
+                foreach($images as $image) :
+                  echo '<div class="box centered">';
+                    echo '<img src="' . $image[url] . '">';
+                    echo '<select>';
+                      echo '<option value="non-branded">Non-Branded</option>';
+                      echo '<option value="branded">Branded</option>';
+                    echo '</select>';
+                    echo '<a href="' . $image[url] . '" class="btn-outline" style="width: initial; display: inline-block;" download>Download</a>';
+                  echo '</div>';
+                endforeach;
+              endif;
+            }
+            if (get_field('gallery_type') == 'icons') {
+              $images = get_field('gallery_items');
+              if ($images) :
+                foreach($images as $image) :
+                  echo '<div class="box centered">';
+                    echo file_get_contents($image['url']);
+                    echo '<select>';
+                      echo '<option value="black">Black</option>';
+                      echo '<option value="white">White</option>';
+                      echo '<option value="orange">Orange</option>';
+                      echo '<option value="blue">Blue</option>';
+                      echo '<option value="green">Green</option>';
+                      echo '<option value="purple">Purple</option>';
+                      echo '<option value="yellow">Yellow</option>';
+                    echo '</select>';
+                    echo '<button class="btn-outline" data-title="' . str_replace(".svg", "", $image['filename']) . '">Download</button>';
+                  echo '</div>';
+                endforeach;
+              endif;
+            }
+          ?>
+          <?php
+
           ?>
         </div>
       </div>

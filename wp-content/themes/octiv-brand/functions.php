@@ -74,8 +74,11 @@ function enqueue_global_js() {
 	if (is_singular('design-examples')) {
 		wp_enqueue_script('prism', get_stylesheet_directory_URI() . '/src/js/_prism.js', array(), '1.0.0', true);
 	}
-  if (get_field('is_page_gallery')) {
+  if (get_field('gallery_type') == 'icons') {
     wp_enqueue_script('download-icon', get_stylesheet_directory_URI() . '/src/js/download-icon.js', array(), '1.0.0', true);
+  }
+  if (get_field('gallery_type') == 'photos') {
+    wp_enqueue_script('download-photo', get_stylesheet_directory_URI() . '/src/js/download-photo.js', array(), '1.0.0', true);
   }
   if (is_singular('datasheets')) {
     wp_enqueue_script('datasheet-print', get_stylesheet_directory_URI() . '/src/js/single-datasheets.js', array(), '1.0.0', true);
