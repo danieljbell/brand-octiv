@@ -9,12 +9,12 @@
       if (imgStyle === 'branded') {
         imgSRC = imgSRC.replace('edited', 'branded');
         this.previousElementSibling.src = imgSRC;
-        var downloadButton = this.parentElement.querySelector('a');
-        downloadButton.href = imgSRC;
       } else {
         imgSRC = imgSRC.replace('branded', 'edited');
         this.previousElementSibling.src = imgSRC;
       }
+      var downloadButton = this.parentElement.querySelector('a');
+      downloadButton.href = imgSRC;
     });
   }
 
