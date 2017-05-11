@@ -55,6 +55,7 @@
                       echo '<option value="yellow">Yellow</option>';
                     echo '</select>';
                     echo '<button class="btn-outline" data-title="' . str_replace(".svg", "", $image['filename']) . '">Download</button>';
+                    echo '<canvas id="canvas" width="500" height="500"></canvas>';
                   echo '</div>';
                 endforeach;
               endif;
