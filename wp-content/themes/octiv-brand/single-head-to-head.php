@@ -34,7 +34,7 @@
             if (have_rows('why_octiv')) :
               echo '<h3 id="why-octiv">Why Choose Octiv Over Conga</h3>';
               while(have_rows('why_octiv')) :
-                echo '<section style="padding: 0;">';
+                echo '<section style="padding-top: 0;">';
                 the_row(); ?>
                 <div style="display: flex;">
                   <div class="why-octiv-icon" style="width: 100%; max-width: 50px; margin-right: 1rem;"><?php echo file_get_contents(get_sub_field('why_octiv_icon')); ?></div>
@@ -47,7 +47,7 @@
               endwhile;
             endif;
           ?>
-          <section style="padding: 0;">
+          <section style="padding-top: 0;">
             <h3 id="key-capabilities">Key Capabilities</h3>
             <table class="table-data-cells">
               <thead>
