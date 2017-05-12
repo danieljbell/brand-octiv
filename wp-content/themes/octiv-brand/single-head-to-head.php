@@ -4,7 +4,7 @@
       <h1><?php echo get_the_title(); ?></h1>
       <div class="third-only">
         <div>
-          <a href="<?php echo get_field('pdf_url'); ?>" class="btn-outline brand-light">Download the Head-to-Head</a>
+          <a href="<?php echo get_field('pdf_url'); ?>" class="btn-outline brand-light" download>Download the Head-to-Head</a>
         </div>
       </div>
     </div>
