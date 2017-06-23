@@ -414,3 +414,60 @@ function register_head_to_head_post_type() {
   );
   register_post_type( 'head-to-head', $args );
 }
+
+
+/*
+===================================
+REGISTER KILLSHEETS POST TYPE
+===================================
+*/
+add_action( 'init' , 'register_killsheets_post_type' );
+
+function register_killsheets_post_type() {
+  $labels = array(
+    'name'                => 'Killsheets',
+    'singular_name'       => 'Killsheet',
+    'add_new'             => 'Add New Killsheet',
+    'add_new_item'        => 'Add New Killsheet',
+    'edit_item'           => 'Edit Killsheet',
+    'new_item'            => 'New Killsheet',
+    'all_items'           => 'All Killsheets',
+    'view_item'           => 'View Killsheets',
+    'search_items'        => 'Search Killsheets',
+    'not_found'           => 'No Killsheet found',
+    'not_found_in_trash'  => 'No Killsheet found in Trash',
+    'parent_item_colon'   => '',
+    'menu_name'           => 'Killsheets'
+  );
+  $args = array(
+    'labels'      => $labels,
+    'public'             => true,
+    'has_archive' => true,
+    'menu_icon'   => 'dashicons-shield',
+    'supports'    => array( 'title', 'excerpt', 'comments'),
+    'capability_type' => 'features',
+    'map_meta_cap' => true,
+    'capabilities' => array(
+    // meta caps (don't assign these to roles)
+    'edit_post'              => 'edit_killsheet',
+    'read_post'              => 'read_killsheet',
+    'delete_post'            => 'delete_killsheet',
+    // primitive/meta caps
+    'create_posts'           => 'create_killsheets',
+    // primitive caps used outside of map_meta_cap()
+    'edit_posts'             => 'edit_killsheets',
+    'edit_others_posts'      => 'manage_killsheets',
+    'publish_posts'          => 'manage_killsheets',
+    'read_private_posts'     => 'read',
+    // primitive caps used inside of map_meta_cap()
+    'read'                   => 'read',
+    'delete_posts'           => 'manage_killsheets',
+    'delete_private_posts'   => 'manage_killsheets',
+    'delete_published_posts' => 'manage_killsheets',
+    'delete_others_posts'    => 'manage_killsheets',
+    'edit_private_posts'     => 'edit_killsheets',
+    'edit_published_posts'   => 'edit_killsheets'
+    ),
+  );
+  register_post_type( 'killsheets', $args );
+}
