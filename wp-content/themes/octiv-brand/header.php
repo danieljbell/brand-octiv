@@ -55,7 +55,7 @@
         <div class="menu-header-container">
           <ul class="menu">
             <li>
-              <a href="/language-styles">Laungauge Styles</a>
+              <a href="/language-styles">Language Styles</a>
               <ul class="sub-menu">
                 <?php
                   $args = array(
@@ -142,6 +142,8 @@
                       $query = new WP_Query($args);
                       if ($query->have_posts()) :
                         echo '<ul class="sub-menu">';
+                        echo '<li><a href="/datasheets">Datasheets</a></li>';
+                        echo '<li><a href="/head-to-head">Head-to-Heads</a></li>';
                         while ($query->have_posts()) :
                           $query->the_post();
                             echo '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
