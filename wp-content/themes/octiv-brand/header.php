@@ -125,6 +125,7 @@
             <li>
               <a href="/resources">Resources</a>
               <ul class="sub-menu">
+                <li><a href="/killsheets">Killsheets</a></li>
                 <?php
                   $post_type_terms = get_terms('resources_type');
                   foreach ($post_type_terms as $term) {
