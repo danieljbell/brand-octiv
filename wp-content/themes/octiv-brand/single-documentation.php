@@ -10,13 +10,7 @@
 
 <section>
   <div class="site-width">
-    <?php 
-      if (current_user_can('administrator')) {
-        echo 'hey man!';
-      } else {
-        echo 'later dude!';
-      }
-    ?>
+    <?php the_content(); ?>
   </div>
 </section>
 
