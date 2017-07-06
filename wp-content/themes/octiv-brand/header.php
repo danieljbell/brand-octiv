@@ -142,8 +142,10 @@
                       $query = new WP_Query($args);
                       if ($query->have_posts()) :
                         echo '<ul class="sub-menu">';
-                        echo '<li><a href="/datasheets">Datasheets</a></li>';
-                        echo '<li><a href="/head-to-head">Head-to-Heads</a></li>';
+                        if ($term->name == 'Downloads') {
+                          echo '<li><a href="/datasheets">Datasheets</a></li>';
+                          echo '<li><a href="/head-to-head">Head-to-Heads</a></li>';
+                        }
                         while ($query->have_posts()) :
                           $query->the_post();
                             echo '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
