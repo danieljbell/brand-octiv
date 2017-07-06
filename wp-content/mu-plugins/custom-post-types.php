@@ -471,3 +471,43 @@ function register_killsheets_post_type() {
   );
   register_post_type( 'killsheets', $args );
 }
+
+
+/*
+===================================
+REGISTER DOCUMENTATION POST TYPE
+===================================
+*/
+add_action( 'init' , 'register_documentation_post_type' );
+
+function register_documentation_post_type() {
+  $labels = array(
+    'name'                => 'Documentation',
+    'singular_name'       => 'Documentation',
+    'add_new'             => 'Add New Documentation',
+    'add_new_item'        => 'Add New Documentation',
+    'edit_item'           => 'Edit Documentation',
+    'new_item'            => 'New Documentation',
+    'all_items'           => 'All Documentation',
+    'view_item'           => 'View Documentation',
+    'search_items'        => 'Search Documentation',
+    'not_found'           => 'No Documentation found',
+    'not_found_in_trash'  => 'No Documentation found in Trash',
+    'parent_item_colon'   => '',
+    'menu_name'           => 'Documentation'
+  );
+  $args = array(
+    'labels'      => $labels,
+    'public'             => true,
+    'has_archive' => true,
+    'menu_icon'   => 'dashicons-microphone',
+    'show_in_nav_menus' => false,
+    'supports'    => array( 'title', 'editor', 'excerpt', 'comments'),
+    // 'map_meta_cap' => true,
+    'capability_type' => 'documentation',
+    'capabilities' => array(
+        'read_posts' => 'read_documentation',
+    ),
+  );
+  register_post_type( 'documentation', $args );
+}

@@ -50,8 +50,121 @@
     <div class="site-width">
       <div class="two-third-reversed">
         <div>
-        <a href="/" title="Homepage" class="site-logo"></a></div>
-        <?php wp_nav_menu( array( 'menu' => 'Header' ) ); ?>
+          <a href="/" title="Homepage" class="site-logo"></a>
+        </div>
+        <div class="menu-header-container">
+          <ul class="menu">
+            <li>
+              <a href="/language-styles">Language Styles</a>
+              <ul class="sub-menu">
+                <?php
+                  $args = array(
+                    'post_type' => 'language-styles'
+                  );
+                  $query = new WP_Query($args);
+                  if ($query->have_posts()) :
+                    while ($query->have_posts()) :
+                      $query->the_post();
+                      echo '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
+                    endwhile;
+                  endif;
+                  wp_reset_query();
+                ?>
+              </ul>
+            </li>
+            <li>
+              <a href="/design-principles">Design Principles</a>
+              <ul class="sub-menu">
+                <?php
+                  $args = array(
+                    'post_type' => 'design-principles'
+                  );
+                  $query = new WP_Query($args);
+                  if ($query->have_posts()) :
+                    while ($query->have_posts()) :
+                      $query->the_post();
+                      echo '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
+                    endwhile;
+                  endif;
+                  wp_reset_query();
+                ?>
+              </ul>
+            </li>
+            <li>
+              <a href="/design-examples">Design Examples</a>
+              <ul class="sub-menu">
+                <?php
+                  $post_type_terms = get_terms('design_example_type');
+                  foreach ($post_type_terms as $term) {
+                    echo '<li><a href="/design-examples/#' . $term->slug . '">' . $term->name . '</a>';
+                      $args = array(
+                        'post_type' => 'design-examples',
+                        'tax_query' => array(
+                          array(
+                            'taxonomy' => 'design_example_type',
+                            'field' => 'name',
+                            'terms' => $term->name,
+                          )
+                        )
+                      );
+                      $query = new WP_Query($args);
+                      if ($query->have_posts()) :
+                        echo '<ul class="sub-menu">';
+                        while ($query->have_posts()) :
+                          $query->the_post();
+                            echo '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
+                        endwhile;
+                        echo '</ul>';
+                      endif;
+                      wp_reset_query();
+                    echo '</li>';
+                  }
+                ?>
+              </ul>
+            </li>
+            <li>
+              <a href="/resources">Resources</a>
+              <ul class="sub-menu">
+                <?php
+                  $post_type_terms = get_terms('resources_type');
+                  foreach ($post_type_terms as $term) {
+                    echo '<li><a href="/resources/#' . $term->slug . '">' . $term->name . '</a>';
+                      $args = array(
+                        'post_type' => 'resources',
+                        'tax_query' => array(
+                          array(
+                            'taxonomy' => 'resources_type',
+                            'field' => 'name',
+                            'terms' => $term->name,
+                          )
+                        )
+                      );
+                      $query = new WP_Query($args);
+                      if ($query->have_posts()) :
+                        echo '<ul class="sub-menu">';
+                        if ($term->name == 'Downloads') {
+                          echo '<li><a href="/datasheets">Datasheets</a></li>';
+                          echo '<li><a href="/head-to-head">Head-to-Heads</a></li>';
+                        }
+                        while ($query->have_posts()) :
+                          $query->the_post();
+                            echo '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
+                        endwhile;
+                        echo '</ul>';
+                      endif;
+                      wp_reset_query();
+                    echo '</li>';
+                  }
+                ?>
+                <?php
+                  if (current_user_can('marketing_user') || current_user_can('administrator')) {
+                    echo '<li><a href="/documentation">Documentation</a></li>';
+                  }
+                ?>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </header>
