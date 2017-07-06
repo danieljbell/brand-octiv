@@ -503,10 +503,28 @@ function register_documentation_post_type() {
     'menu_icon'   => 'dashicons-microphone',
     'show_in_nav_menus' => false,
     'supports'    => array( 'title', 'editor', 'excerpt', 'comments'),
-    // 'map_meta_cap' => true,
+    'map_meta_cap' => true,
     'capability_type' => 'documentation',
     'capabilities' => array(
-        'read_posts' => 'read_documentation',
+    // meta caps (don't assign these to roles)
+    'edit_post'              => 'edit_documentation',
+    'read_post'              => 'read_documentation',
+    'delete_post'            => 'delete_documentation',
+    // primitive/meta caps
+    'create_posts'           => 'create_documentations',
+    // primitive caps used outside of map_meta_cap()
+    'edit_posts'             => 'edit_documentations',
+    'edit_others_posts'      => 'manage_documentations',
+    'publish_posts'          => 'manage_documentations',
+    'read_private_posts'     => 'read',
+    // primitive caps used inside of map_meta_cap()
+    'read'                   => 'read',
+    'delete_posts'           => 'manage_documentations',
+    'delete_private_posts'   => 'manage_documentations',
+    'delete_published_posts' => 'manage_documentations',
+    'delete_others_posts'    => 'manage_documentations',
+    'edit_private_posts'     => 'edit_documentations',
+    'edit_published_posts'   => 'edit_documentations'
     ),
   );
   register_post_type( 'documentation', $args );
