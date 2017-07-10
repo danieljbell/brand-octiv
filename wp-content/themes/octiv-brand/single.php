@@ -28,12 +28,16 @@
               if ($images) :
                 foreach($images as $image) :
                   echo '<div class="box centered">';
-                  echo '<h4>' . $image[title] . '</h4>';
+                  if ($post->post_title == 'Headshots') {
+                    echo '<h4>' . $image[title] . '</h4>';
+                  }
                     echo '<img src="' . $image[sizes][medium] . '" alt="' . $image[title] . '">';
+                  if ($post->post_title == 'Headshots') {
                     echo '<select>';
                       echo '<option value="non-branded">Non-Branded</option>';
                       echo '<option value="branded">Branded</option>';
                     echo '</select>';
+                  }
                     echo '<a href="' . $image[url] . '" class="btn-outline" style="width: initial; display: inline-block;" download>Download</a>';
                   echo '</div>';
                 endforeach;
