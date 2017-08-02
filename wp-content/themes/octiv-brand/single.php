@@ -28,7 +28,7 @@
               if ($images) :
                 foreach($images as $image) :
                   echo '<div class="box centered">';
-                  if ($post->post_title == 'Headshots') {
+                  if ($post->post_title != "Stock Photos") {
                     echo '<h4>' . $image[title] . '</h4>';
                   }
                     echo '<img src="' . $image[sizes][medium] . '" alt="' . $image[title] . '">';
