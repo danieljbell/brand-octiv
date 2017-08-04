@@ -529,3 +529,60 @@ function register_documentation_post_type() {
   );
   register_post_type( 'documentation', $args );
 }
+
+
+/*
+===================================
+REGISTER WIN/LOSS POST TYPE
+===================================
+*/
+add_action( 'init' , 'register_win_loss_post_type' );
+
+function register_win_loss_post_type() {
+  $labels = array(
+    'name'                => 'Win/Loss',
+    'singular_name'       => 'Win/Loss',
+    'add_new'             => 'Add New Win/Loss',
+    'add_new_item'        => 'Add New Win/Loss',
+    'edit_item'           => 'Edit Win/Loss',
+    'new_item'            => 'New Win/Loss',
+    'all_items'           => 'All Win/Losses',
+    'view_item'           => 'View Win/Loss',
+    'search_items'        => 'Search Win/Losses',
+    'not_found'           => 'No Win/Loss found',
+    'not_found_in_trash'  => 'No Win/Loss found in Trash',
+    'parent_item_colon'   => '',
+    'menu_name'           => 'Win/Losses'
+  );
+  $args = array(
+    'labels'      => $labels,
+    'public'             => true,
+    'has_archive' => true,
+    'menu_icon'   => 'dashicons-phone',
+    'supports'    => array( 'title', 'excerpt', 'comments'),
+    'capability_type' => 'features',
+    'map_meta_cap' => true,
+    'capabilities' => array(
+    // meta caps (don't assign these to roles)
+    'edit_post'              => 'edit_win_loss',
+    'read_post'              => 'read_win_loss',
+    'delete_post'            => 'delete_win_loss',
+    // primitive/meta caps
+    'create_posts'           => 'create_win_losses',
+    // primitive caps used outside of map_meta_cap()
+    'edit_posts'             => 'edit_win_losss',
+    'edit_others_posts'      => 'manage_win_losses',
+    'publish_posts'          => 'manage_win_losses',
+    'read_private_posts'     => 'read',
+    // primitive caps used inside of map_meta_cap()
+    'read'                   => 'read',
+    'delete_posts'           => 'manage_win_losses',
+    'delete_private_posts'   => 'manage_win_losses',
+    'delete_published_posts' => 'manage_win_losses',
+    'delete_others_posts'    => 'manage_win_losses',
+    'edit_private_posts'     => 'edit_win_losses',
+    'edit_published_posts'   => 'edit_win_losses'
+    ),
+  );
+  register_post_type( 'win-loss', $args );
+}
