@@ -157,6 +157,7 @@
                     echo '</li>';
                   }
                 ?>
+                <li><a href="/win-loss">Win/Loss</a></li>
                 <?php
                   if (current_user_can('marketing_user') || current_user_can('administrator')) {
                     echo '<li><a href="/documentation">Documentation</a></li>';
