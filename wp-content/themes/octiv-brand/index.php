@@ -14,16 +14,16 @@
   <div class="site-width">
     <div class="third">
       <div class="box">
-        <h2>Who</h2>
-        <p>Octiv provides document generation and contract management solutions.</p>
+        <h2>What</h2>
+        <p>We create digital document solutions.</p>
       </div>
       <div class="box">
-        <h2>What</h2>
-        <p>Our software solutions allow customers to create, share, sign and store documents, increasing efficiency, accuracy and saving time.</p>
+        <h2>How</h2>
+        <p>We connect business professionals with today's customer.</p>
       </div>
       <div class="box">
         <h2>Why</h2>
-        <p>Octiv’s goal is to save customers time, allow them to close deals faster and deliver business results.</p>
+        <p>We believe in a world where technology makes lives easier.</p>
       </div>
     </div>
   </div>
