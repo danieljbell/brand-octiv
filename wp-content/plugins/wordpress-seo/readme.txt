@@ -4,9 +4,10 @@ Donate link: https://yoast.com/
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 Tags: SEO, XML sitemap, Google Search Console, Content analysis, Readability
-Requires at least: 4.4
-Tested up to: 4.7
-Stable tag: 4.4
+Requires at least: 4.8
+Tested up to: 4.9.1
+Stable tag: 6.0
+Requires PHP: 5.2.4
 
 Improve your WordPress SEO: Write better content and have a fully optimized WordPress site using the Yoast SEO plugin.
 
@@ -29,7 +30,7 @@ Using the snippet preview, you can see a rendering of what your post or page wil
 = Page Analysis =
 The Yoast SEO plugins [Page Analysis](https://yoast.com/content-seo-wordpress-linkdex/) functionality checks simple things you're bound to forget. It checks, for instance, if you have images in your post and whether they have an alt tag containing the focus keyword for that post. It also checks whether your posts are long enough, whether you've written a meta description and if that meta description contains your focus keyword, if you've used any subheadings within your post, etc. etc.
 
-The plugin alsgruo allows you to write meta titles and descriptions for all your category, tag and custom taxonomy archives, giving you the option to further optimize those pages.
+The plugin also allows you to write meta titles and descriptions for all your category, tag and custom taxonomy archives, giving you the option to further optimize those pages.
 
 Combined, this plugin makes sure that your content is the type of content search engines will love!
 
@@ -124,29 +125,69 @@ You'll find answers to many of your questions on [kb.yoast.com](https://kb.yoast
 
 == Changelog ==
 
-= 4.4.0 =
+= 6.0.0 =
+Release Date: December 20th, 2017
 
-Release date: February 28th, 2017
+Enhancements:
 
-* Bugfixes:
-	* Fixes a bug where a `span` tag wasn't closed correctly, props [lubobill1990](https://github.com/lubobill1990).
-	* Fixes a bug where there were deprecation warnings shown when an existing author was being updated.
-	* Fixes a bug where the user received an 'insufficient rights' error when the advanced settings are disabled, but an advanced page is visited.
+* Adds support for custom page titles and meta descriptions on the WooCommerce shop page. Props [Caleb Burks](https://github.com/WPprodigy).
+* Adds support for custom page social titles and descriptions on the WooCommerce shop page.
+* Adds a link to the Google Knowledge Graph article on Yoast.com. Props [Raaj Trambadia](https://github.com/raajtram).
+* Adds a link to an article on Yoast.com on why it might be a bad idea to use the same keyword more than once.
+* Changed the meta description maximum recommended length from 156 to 320 characters.
 
-* Enhancements:
-	* Moves the options to disable keyword and content analysis from the general tab to the features tab.
-	* Improves styling of tables so they are viewable on mobile.
-	* Changes the links into shortlinks for the extensions page, helpcenter, facebook settings and premium popup.
+Bugfixes:
 
-= 4.3.0 =
+* Disables the mark buttons of the content analysis when switched to text view.
+* Hides the mark buttons when the WYSIWYG editor is not loaded or the filter `wpseo_enable_assessment_markers` returns false.
+* Security hardening through stricter code checks.
 
-Release Date: February 14th, 2017
+= 5.9.3 =
 
-* Bugfixes
-    * Fixes the width of the readability column on post overview, props [rikayla](https://github.com/rikayla).
+Release Date: December 11th, 2017
 
-* Enhancements
-    * Improves feedback text for subheading too long assessment.
+Security:
+
+* Fixes an issue where a part of the excerpt would be leaked on password protected posts when used as a replacement variable. Such as `%%excerpt%%` and `%%excerpt_only%%`. Props to [Rolands Umbrovskis](https://profiles.wordpress.org/rolandinsh) for reporting this issue to us.
+
+= 5.9.2 =
+Release Date: December 11th, 2017
+
+Bugfixes:
+
+* Fixes a bug where older browsers couldn't load the content analysis. This applies to Internet Explorer (10 and lower) and Safari (9.1 and lower).
+* Fixes a bug where the Yoast Metabox wouldn't be shown for posts set to `noindex`, therefore making it impossible to change it back to `index`, view Readability scores and not being able to optimize a post, before allowing it to be indexed.
+* Fixes a bug where translations wouldn't be applied in the Yoast SEO Metabox for SEO and Readability scores.
+
+= 5.9.1 =
+Release Date: December 5th, 2017
+
+Bugfixes:
+
+* Fixes a bug where the configuration wizard could not be loaded, caused by a missing JavaScript dependency.
+
+= 5.9.0 =
+Release Date: December 5th, 2017
+
+Bugfixes:
+
+* Fixes a bug where the title isn't added back to the HTML when the debug marker has been disabled.
+* Fixes a bug where multiple help panels showed up when clicking on different help buttons.
+* Fixes a bug where the Help Center wouldn't be closed when clicking the Go Premium link.
+* Fixes a bug where the cornerstone setting for a post would be lost when quick editing the post.
+* Fixes a bug where newly created posts were taken into account for the link count, resulting in MySQL errors. Props to [stodorovic](https://github.com/stodorovic).
+* Fixes a bug where Premium plugins were being treated as WordPress.org plugins in the 'suggested plugin' notifications, resulting in download errors.
+* Fixes a bug where an empty div was visible when both Content and Readability analysis are disabled.
+
+Enhancements
+
+* Shows a notice regarding opening the Onboarding Wizard when the plugin is installed for the first time.
+* Makes it easier to unhook the debug code rendered as HTML comment.
+* Implements the Reactified content analysis.
+* Introduces the `wpseo_add_opengraph_additional_images` filter to allow additional OpenGraph Images to be added at a low priority.
+* Changes the Dashboard widget's progress bar height to 24px.
+* Makes the 'Next' and 'Back' buttons in the Onboarding Wizard focusable.
+* Adds grouping of feedback within the content analysis, in the following categories: 'errors', 'problems', 'needs improvement', 'considerations', and 'good'. Each category can be expanded and collapsed.
 
 = Earlier versions =
 
