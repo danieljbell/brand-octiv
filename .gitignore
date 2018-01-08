@@ -37,3 +37,9 @@ wp-content/themes/twenty*/
 wp-content/themes/octiv-brand/node_modules/
 wp-content/themes/octiv-brand/bower_components/
 wp-content/themes/octiv-brand/dist/video
+
+wp-content/mu-plugins/force-strong-passwords/
+wp-content/mu-plugins/wpengine-common/
+wp-content/mu-plugins/mu-plugin
+wp-content/mu-plugins/slt-force-strong-passwords
+wp-content/mu-plugins/stop-long-comments.php
